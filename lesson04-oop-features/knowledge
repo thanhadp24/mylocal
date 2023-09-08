@@ -1,0 +1,65 @@
+1. Đóng gói - Encapsulation
+Khái niệm: tính chất đóng gói được thể hiện qua access modifier.Nếu:
++ private ==> phạm vi class
++ protected, default(no define) ==> phạm vi package
+ ==> thừa kế - inheritance
+ khi lớp cha có phương thức, thuộc tính mang access modifier là:
+ . protected: class con(trong cùng package hoặc ngoài package ) đều kế thừa được
+ . default: class con (trong cùng package ) mới có thể kế thừa được
++ public ==> everywhere
+
+2.Đa hình - polymorphism
++ Phương thức:
+	. Overloading:
+	   Hai hay nhiều phương thức đgl overloading nếu :
+	    - Thuộc cùng 1 class
+	    - Cùng tên hàm:
+	    + khác KDL tham số truyền vào
+	    + khác số lượng tham số
+	    
+	. Overriding:
+	   - hàm thuộc lớp cha
+	   - kế thừa , định nghĩa lại trong lớp con
+	   - kế thừa cả thuộc tính, phương thức
+	   - chỉ được phép override phương thức
++ Đối tượng:
+	 * 1. Tại sao không khai báo KDL lúc compile và runtime giống nhau
+	 * + Áp dụng factory pattern (tạo ra các pattern: rectangle, square,...)
+	 * + Dễ dàng chuyển đổi KDL qua về
+	 * + Tạo tập hợp các phần tử KDL cha, con đưa vào 1 mảng duy nhất
+	 * + Convention
+	 * 2. Nếu lấy KDL của lớp con new(gán =) KDL của lớp cha được không
+	 * + Cha = con --> oke
+	 * + Else      --> no	
+	 * 3. Lấy KDL lúc compile và runtime không có quan hệ được không
+	 * + không
+	 
+3. Thừa kế-inheritance
+	1. This, super
+	?. Đặt vấn đề
+	+ Class chứa hàm k có body --> không cho phép
+	+ không bắt buộc phải override
+	  
+    2.Kiểu kế thừa
+    + Class extends class
+    + Class implements interface class
+    + Class extends abstract class
+    + class extends class implements interface(s)
+    ==> interface : consists of abstract method
+    ==> abstract  : consists of abstract and normal method
+    ==> class     : consists of normal method
+    ** JAVA không hỗ trợ đa thừa kế (multiple extends) vì class con kế thừa từ
+    class cha --> không bắt buộc phải override
+    --> nếu các class cha có các hàm trùng tên X mà mình không override lại thì 
+    khi class con: Con con = new Con(); rồi gọi con.X nó sẽ không biết gọi X nào trong class cha
+
+	** Từ JAVA 08: interface có thể chứa hàm có body bằng cách thêm từ khóa default, static
+		  JAVA 09: thêm từ khóa private
+		  nguyên nhân: hạn chế tạo ra, override các method trùng nhau ở class con từ interface cha 
+		  			   khi các hàm ở class con override từ interface cha mà có trùng nội dung hàm 
+		  			   --> tạo ra hàm có body ở interface cha    
+    
+4. Tính chất trừu tượng 
+  Khái niệm: được thể hiện qua class, interface, abstract class, method
+    
+	    

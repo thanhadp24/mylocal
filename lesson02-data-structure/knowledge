@@ -1,0 +1,88 @@
+* DATA STRUCTURE *
+
+// global variable --> attribute (thuộc tính)
++ use of any function in class A and also A's external
+
+// public : access modifier : được dùng ở mọi nơi
+// private : only use in own class
+
+// static --> class's scope
+// non - static --> object's scope . Để gọi biến này cần phải tạo đối tượng từ
+	class đó rồi truy cập biến non-static (class val_name = new class --> val_name.đối tượng cần dùng)
+
+// variables: luôn luôn được lưu trữ ở stack	
+
+// khi gọi, in ra biến KDL đối tượng thì tự động nó sẽ gọi hàm toString của class 'Object'
+ + Class Object : Mặc định là class cha của tất cả các class trong java
+ + toString: giá trị, thông tin của đối tượng hiện tại
+ + Nếu trong class Item, define lại cái toString thì khi gọi nó sẽ gọi 
+   cái toString trong cái class Item đó.
+   
+// data type:
++ Primitive type: int, float, double, char,...
+ ==> luư trữ single value ở stack	
+ ==> để intialize dùng: toán tử =
+ 
++ Object type: có sẵn của java hoặc do mình tự tạo ra: Integer, Float, String...
+ ==> giá trị lưu ở heap
+ ==> khi unintialize thì nó sẽ có giá trị null và chưa được khởi tạo trên heap
+ ==> để khởi tạo ô nhớ trên heap dùng: new 
+ ==> nếu mình gán object type = null: biến ở stack sẽ không luư trữ gì hết vì trên heap chưa khởi tạo
+ 
+// so sánh primitive vs object type:
++ primitive: luôn có giá trị và được lưu trữ ở stack
++ object: có thể có giá trị hoặc null, hỗ trợ thêm nhiều phương thức bổ ích khác
+VD: 
++ object_name.isAlphabetic(character): check xem nó có phải kí tự chữ không
+
++ object_name.matches(regex): check xem có phải chuỗi số không
+     + regex: stand for regular expression --> biểu thức chính quy: tập các quy tắc, cú pháp của chuỗi số,kí tự
+     		regex : [0-9]{3,}: lấy những số có nhiều hơn 3 kí tự
+     				[0-9]{3} : lấy những số có đúng 3 chữ số
+     				[0-9] <=> \d  || "\\d" : thoả mãn 1 kí tự bất kì từ 0-9
+					{1,}  <=> +: 1 hoặc nhiều kí tự
+					{1,5} <=> từ 1-5 kí tự
+							==> [0-9]{1,} <=> \\d+
+					thập phân: 123.434 regex = "\\d+.\\d+"
+					nếu số âm : "-?\\d+"
++ object_name.startWith(""): check kí tự đầu tiên	
+
+				
+// final = constant:
++ nó không thay đổi giá trị trên stack nhưng có thể thay đổi trên Heap
+
+// heap -> constant pool memory
+vd: Integer a = 10;
++ System.identityHashCode(): check mã định danh// heap -> normal memory
+vd: Integer a = new Integer();	
+   
+====================================
+* ARRAY *
++ for-each: duyệt các giá trị của mảng không quan tâm đến index
+vd int[] a = {};
+   for(int element: a){
+   	  system.out.println(element);}
++ for-index: duyệt như bình thường
+
+// Arrays.toString(a)   --> in ra các phần tử trong mảng a   
+// Arrays.copyOfRange(origin, from, to) --> copy mảng origin từ phần a - b(length)\
+
+=====================================
+* INPUT/OUTPUT *
++ Scanner ip = new Scanner(System.in);
+VD:
+  + int a = ip.nextInt();
+  + String b = ip.nextLine();
+  
++ int age = Integer.parseInt(ip.nextLine()); // nếu sau đó mình nhập vào chuỗi thì dùng này sẽ mất đi enter
+
+=====================================
+* RANDOM *
++ Random rd = new Random();
+VD:
+  + int a = rd.nextInt(5): random từ 0 - 4
+ 
+=====================================
+
+
+   

@@ -1,0 +1,19 @@
+1. Bạn học OOP chưa, có tính chất nào
+   cho ví dụ về tính chất X, áp dụng như nào
+   
+2. khái niệm static
+
+3. phân biệt this, super
+
+4. phân biệt abstract class và interface
+	+ Trước Java07
+	+ Sau java08
+
+5. method trong interface có thể chứa thân hàm được không
+   + default, static ==> java08
+   + private         ==> java09
+   
+6. java có hỗ trợ đa thừa kế không
+	==> không
+
+7. phân biệt các access modifier ==> private, public, protected, nothing  

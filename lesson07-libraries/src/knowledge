@@ -1,0 +1,19 @@
+JAVA07
+Calendar
+Date
+--> d/M/y H/m/s/ms... 
+DateFormat, SimpleDateFormat
+==> không xử lí, in ra riêng biệt được d/M... 
+
+===============
+
+JAVA08
+LocalDate --> d/M/y
+LocalTime --> H/m/s
+LocalDateTime --> d/M/y H/m/s
+DatetimeFormatter
+
+==> solved
++ month: 1-12
++ d/M/y H/m/s
++ period(LocalDate), duration(LocalTime)

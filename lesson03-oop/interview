@@ -1,0 +1,16 @@
+1. Phân biệt class và object.Cho ví dụ đã từng sử dụng
++ class: 
+2. This là gì
+
+3. Tại sao khai báo private cho các thuộc tính trong class
+	và sử dụng getter,setter để truy cập 
+	
+	==> Sao không dùng public để dễ dàng truy cập
+
+4. Phân biệt constructor, setter method
+
+5. Khi nào nên sử dụng, khai báo từ khóa static cho 
++ Thuộc tính
++ Phương thức
+
+6. Non-static: sẽ đc tạo ra sau thèn static, chưa có các thuộc tính trên heap, do đó mình phải tạo đối tượng mới truy cập đc các thuộc tính đó.

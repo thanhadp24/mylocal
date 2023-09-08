@@ -1,0 +1,18 @@
+Collection
+--> support object type
+
+- List<T> ==> có thể lưu được các giá trị trùng nhau
+--> need to override T's equal method when using contains, remove in List
+--> prefer using ArrayList
+
++ ArrayList
+ . Array with fixed size
+ . size <= length
+ . capacity
+ 
++ LinkedList(1) vs ArrayList(2)
+ . get/ set --> 2
+ . add 
+ . remove 
+ 
+JAVA support double linked list
