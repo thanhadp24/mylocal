@@ -86,7 +86,7 @@ Doctor Utils::createDoctor()
     return Doctor(id, fn, faculty, wt);
 }
 
-void Utils::createPatient()
+void Utils::createPatient(const string & pathName)
 {
     string fn, gender, phone, password, address;
     int age;
@@ -108,22 +108,25 @@ void Utils::createPatient()
     Patient p = Patient(fn, gender, age, phone, password, address);
     if (this->patientSize < MAX_PATIENT_SIZE)
         this->patients[this->patientSize++] = p;
+    
+    storePatientsToFile(pathName);
 }
 
 void Utils::show()
-{   
+{
     cout << "\n------------- Lịch khám bệnh ------------\n";
     for (int i = 0; i < this->doctorSize; i++)
     {
         Doctor doctor = this->doctors[i];
         cout << "Bác sĩ thứ: " << (i + 1) << endl;
         cout << doctor;
-        cout << "\nBệnh nhân:\n";
         for (int j = 0; j < doctor.size; j++)
         {
+            cout << "\nBệnh nhân:\n";
             Patient patient = doctor.patients[j];
             cout << patient;
         }
+        cout << "\n==================================================================\n\n";
     }
 }
 
@@ -222,9 +225,9 @@ void Utils::showFacultySchedule(const string &faculty)
     }
 }
 
-void Utils::writeDataToFile(const string& pathName)
+void Utils::writeDataToFile(const string &pathName)
 {
-    
+
     ofstream outputFile(pathName);
 
     if (!outputFile.is_open())
@@ -255,4 +258,23 @@ void Utils::writeDataToFile(const string& pathName)
     }
 
     outputFile.close();
+}
+
+void Utils::storePatientsToFile(const string &pathName)
+{
+    ofstream outputFile(pathName, ios_base::app);
+
+    if (!outputFile.is_open())
+    {
+        std::cerr << "Error opening file for writing." << std::endl;
+        return;
+    }
+
+    for (int i = 0; i < patientSize; i++)
+    {
+        Patient patient = this->patients[i];
+        outputFile << patient.getFullName() << ", " << patient.getAge() << ", " << patient.getGender() << ", " 
+        << patient.getPhone() << ", " << patient.getPassword() << ", " << patient.getAddress() << endl;
+
+    }
 }

@@ -69,7 +69,8 @@ void Doctor::removePatient(const int index)
 
 ostream& operator<< (ostream& o, const Doctor& d)
 {
-    o << "id: " << d.id << ", name: " << d.fullName << ", faculty: " << d.faculty << ", working time: " << d.workingTime << endl;
+    o << "id: " << d.id << " || name: " << d.fullName << " || faculty: " << d.faculty << " || working time: " << d.workingTime << endl;
+    return o;
 }
 
 bool Doctor::isEmpty()

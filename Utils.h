@@ -19,7 +19,7 @@ public:
     void addDoctor(const Doctor &);
     void show();
 
-    void createPatient();
+    void createPatient(const string & = "");
     Doctor createDoctor();
 
     void makeAnApointment(const string &faculty);
@@ -28,4 +28,5 @@ public:
     void chooseFaculty();
 
     void writeDataToFile(const string & = "");
+    void storePatientsToFile(const string & = "");
 };
