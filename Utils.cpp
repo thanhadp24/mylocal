@@ -59,7 +59,7 @@ string Utils::trim(string str)
     return str;
 }
 
-void Utils::addDoctor(const Doctor &d)
+void Utils::addDoctor(Doctor &d)
 {
     if (this->doctorSize < MAX_DOCTOR_SIZE)
     {
@@ -70,6 +70,18 @@ void Utils::addDoctor(const Doctor &d)
         cout << "max doctors\n";
     }
 }
+
+// bool Utils::isExistDoctorId(Doctor &d)
+// {
+//     for (int i = 0; i < doctorSize; i++)
+//     {
+//         if (d.getId().compare(this->doctors[i].getId()) == 0)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 Doctor Utils::createDoctor()
 {
@@ -86,7 +98,7 @@ Doctor Utils::createDoctor()
     return Doctor(id, fn, faculty, wt);
 }
 
-void Utils::createPatient(const string & pathName)
+void Utils::createPatient(const string &pathName)
 {
     string fn, gender, phone, password, address;
     int age;
@@ -108,8 +120,6 @@ void Utils::createPatient(const string & pathName)
     Patient p = Patient(fn, gender, age, phone, password, address);
     if (this->patientSize < MAX_PATIENT_SIZE)
         this->patients[this->patientSize++] = p;
-    
-    storePatientsToFile(pathName);
 }
 
 void Utils::show()
@@ -118,15 +128,18 @@ void Utils::show()
     for (int i = 0; i < this->doctorSize; i++)
     {
         Doctor doctor = this->doctors[i];
-        cout << "Bác sĩ thứ: " << (i + 1) << endl;
-        cout << doctor;
-        for (int j = 0; j < doctor.size; j++)
+        if (!doctor.isEmpty())
         {
-            cout << "\nBệnh nhân:\n";
-            Patient patient = doctor.patients[j];
-            cout << patient;
+            cout << "Bác sĩ thứ: " << (i + 1) << endl;
+            cout << doctor;
+            for (int j = 0; j < doctor.size; j++)
+            {
+                cout << "\nBệnh nhân:\n";
+                Patient patient = doctor.patients[j];
+                cout << patient;
+            }
+            cout << "\n==================================================================\n\n";
         }
-        cout << "\n==================================================================\n\n";
     }
 }
 
@@ -201,11 +214,11 @@ void Utils::makeAnApointment(const string &faculty)
     string choose;
     cout << "\nChọn ca khám bạn mong muốn theo id bác sĩ: ";
     cin >> choose;
-
+    
     for (int i = 0; i < this->doctorSize; i++)
     {
         Doctor &doctor = this->doctors[i];
-        if (doctor.getFaculty().compare(faculty) == 0 && doctor.getId().compare(choose) == 0)
+        if (doctor.getFaculty().compare(faculty) == 0 && doctor.getId().compare(choose) == 0) 
         {
             doctor.addPatient(p);
         }
@@ -228,7 +241,7 @@ void Utils::showFacultySchedule(const string &faculty)
 void Utils::writeDataToFile(const string &pathName)
 {
 
-    ofstream outputFile(pathName);
+    ofstream outputFile(pathName, ios_base::app);
 
     if (!outputFile.is_open())
     {
@@ -252,29 +265,11 @@ void Utils::writeDataToFile(const string &pathName)
                 Patient patient = doctor.patients[j];
                 outputFile << "Bệnh nhân:\n";
                 outputFile << (j + 1) << ". Họ tên: " << patient.getFullName() << ", giới tính: " << patient.getGender() << ", tuổi: "
-                           << patient.getAge() << ", địa chỉ: " << patient.getAddress() << "\n";
+                           << patient.getAge() << ", địa chỉ: " << patient.getAddress() << endl;
+                outputFile << endl;
             }
         }
     }
 
     outputFile.close();
-}
-
-void Utils::storePatientsToFile(const string &pathName)
-{
-    ofstream outputFile(pathName, ios_base::app);
-
-    if (!outputFile.is_open())
-    {
-        std::cerr << "Error opening file for writing." << std::endl;
-        return;
-    }
-
-    for (int i = 0; i < patientSize; i++)
-    {
-        Patient patient = this->patients[i];
-        outputFile << patient.getFullName() << ", " << patient.getAge() << ", " << patient.getGender() << ", " 
-        << patient.getPhone() << ", " << patient.getPassword() << ", " << patient.getAddress() << endl;
-
-    }
 }

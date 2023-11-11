@@ -16,7 +16,7 @@ public:
 
     string trim(string = "");
     void init(const string & = "");
-    void addDoctor(const Doctor &);
+    void addDoctor(Doctor &);
     void show();
 
     void createPatient(const string & = "");
@@ -26,7 +26,7 @@ public:
     void showFacultySchedule(const string & = "");
     void showFaculty();
     void chooseFaculty();
+    //bool isExistDoctorId(Doctor&);
 
     void writeDataToFile(const string & = "");
-    void storePatientsToFile(const string & = "");
 };
