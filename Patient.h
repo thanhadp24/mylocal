@@ -1,41 +1,17 @@
-#include <bits/stdc++.h>
+#include "Person.h"
 
 using namespace std;
 
-class Patient
+class Patient : public Person
 {
 private:
-    string fullname;
-    string gender;
-    int age;
-    string phone; // username
-    string password;
-    string address;
-    
-
+    string datetime;
 public:
-    Patient(string = "", string = "", int = 0, string = "", string = "", string = "");
+    Patient(string = "", string = "", int = 0, string = "", string = "", string = "", string = "");
     virtual ~Patient();
 
-    void setFullName(string = "");
-    string getFullName();
+    friend ostream& operator<< (ostream&, const Patient&);
     
-    void setGender(string = "");
-    string getGender();
-    
-    void setAge(int = 0);
-    int getAge();
-    
-    void setPhone(string = "");
-    string getPhone();
-
-    void setPassword(string = "");
-    string getPassword();
-
-    void setAddress(string = "");
-    string getAddress();
-    
- 
-    friend ostream& operator<<(ostream&, const Patient&);
-  
+    void setDatetime(const string& = "");
+    string getDatetime();
 };
