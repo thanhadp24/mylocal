@@ -2,7 +2,7 @@
 #include "iostream"
 const int MAX_DOCTOR_SIZE = 20;
 const int MAX_PATIENT_SIZE = 100;
-class HealthCareManagement
+class Staff
 {
 private:
     Doctor doctors[MAX_DOCTOR_SIZE];
@@ -11,8 +11,8 @@ private:
     int patientSize;
 
 public:
-    HealthCareManagement();
-    ~HealthCareManagement();
+    Staff();
+    virtual ~Staff();
 
     string trim(string = "");
     void init(const string & = "");
@@ -29,7 +29,6 @@ public:
 
     void makeAnAppointment(const string & = "", const string & = "");
 
-    void writeDataToFile(const string & = "");
     void usernameStoring(Patient&);
     void getUsernames();
 
@@ -42,5 +41,5 @@ public:
     void menuForPatient();
     void menuForDoctor();
 
-    string getInputWithFormat();
+   
 };

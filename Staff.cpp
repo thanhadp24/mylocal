@@ -1,14 +1,14 @@
-#include "HealthCareManagement.h"
+#include "Staff.h"
 
-HealthCareManagement::HealthCareManagement()
+Staff::Staff()
 {
     this->doctorSize = 0;
     this->patientSize = 0;
 }
 
-HealthCareManagement::~HealthCareManagement() {}
+Staff::~Staff() {}
 
-void HealthCareManagement::init(const string &pathName)
+void Staff::init(const string &pathName)
 {
     ifstream file(pathName);
     string line;
@@ -53,7 +53,7 @@ void HealthCareManagement::init(const string &pathName)
     }
 }
 
-string HealthCareManagement::trim(string str)
+string Staff::trim(string str)
 {
     // Loại bỏ khoảng trắng ở đầu chuỗi
     while (!str.empty() && isspace(str.front()))
@@ -70,7 +70,7 @@ string HealthCareManagement::trim(string str)
     return str;
 }
 
-void HealthCareManagement::addDoctor(Doctor &d)
+void Staff::addDoctor(Doctor &d)
 {
     if (this->doctorSize < MAX_DOCTOR_SIZE)
     {
@@ -82,21 +82,26 @@ void HealthCareManagement::addDoctor(Doctor &d)
     }
 }
 
-void HealthCareManagement::sign_up()
+void Staff::sign_up()
 {
     getUsernames();
     string fn, gender, phone, password, address;
     int age;
-
+    cout << "----------- Đăng ký ------------\n";
+    cin.ignore();
     cout << "Nhập họ tên bệnh nhân: ";
     cin >> fn;
+   
     cout << "Nhập giới tính: ";
     cin >> gender;
+    
     cout << "Nhập tuổi: ";
     cin >> age;
     cin.ignore();
     cout << "Nhập địa chỉ: ";
     cin >> address;
+    
+    
     bool check = false;
     do
     {
@@ -118,7 +123,7 @@ void HealthCareManagement::sign_up()
     cout << "Bạn đã đăng ký thành công\n";
 }
 
-bool HealthCareManagement::isValidUsername(string us)
+bool Staff::isValidUsername(string us)
 {
     for (int i = 0; i < this->patientSize; i++)
     {
@@ -131,7 +136,7 @@ bool HealthCareManagement::isValidUsername(string us)
     return true;
 }
 
-void HealthCareManagement::showFaculty()
+void Staff::showFaculty()
 {
     cout << "--------------FACULTY--------------\n";
     cout << "1. Khoa nội" << endl;
@@ -141,7 +146,7 @@ void HealthCareManagement::showFaculty()
     cout << "5. Khoa tai mũi họng" << endl;
 }
 
-void HealthCareManagement::makeAnAppointment(const string &un, const string &pw)
+void Staff::makeAnAppointment(const string &un, const string &pw)
 {
     showFaculty();
     cout << "\nChọn khoa bạn muốn khám: ";
@@ -175,7 +180,7 @@ void HealthCareManagement::makeAnAppointment(const string &un, const string &pw)
     }
 }
 
-void HealthCareManagement::chooseDoctor(const string &faculty, const string &un, const string &pw)
+void Staff::chooseDoctor(const string &faculty, const string &un, const string &pw)
 {
     getUsernames();
     Patient p;
@@ -198,7 +203,7 @@ void HealthCareManagement::chooseDoctor(const string &faculty, const string &un,
     do
     {
         cout << "Chọn thời gian khám theo định dạng (dd/MM/yyyy hh): ";
-        cin >> datetime;
+        getline(cin, datetime);
         if (isValidDatetime(datetime, choose, faculty))
         {
             p.setDatetime(datetime);
@@ -221,7 +226,7 @@ void HealthCareManagement::chooseDoctor(const string &faculty, const string &un,
     } while (check);
 }
 
-bool HealthCareManagement::isValidDatetime(const string &datetime, const string &id, const string &faculty)
+bool Staff::isValidDatetime(const string &datetime, const string &id, const string &faculty)
 {
     for (int i = 0; i < this->doctorSize; i++)
     {
@@ -241,7 +246,7 @@ bool HealthCareManagement::isValidDatetime(const string &datetime, const string 
     return true;
 }
 
-void HealthCareManagement::showFacultySchedule(const string &faculty)
+void Staff::showFacultySchedule(const string &faculty)
 {
     cout << "-------------- " << faculty << " ----------------\n";
     cout << "----------- Thời Gian Khám Bệnh -----------\n";
@@ -257,7 +262,7 @@ void HealthCareManagement::showFacultySchedule(const string &faculty)
     }
 }
 
-void HealthCareManagement::workingTimeInWeek()
+void Staff::workingTimeInWeek()
 {
     // Lấy thời gian hiện tại
     time_t now = time(0);
@@ -301,7 +306,7 @@ void HealthCareManagement::workingTimeInWeek()
     cout << " đến thứ bảy: " << nextSat->tm_mday << "/" << 1 + nextSat->tm_mon << "/" << 1900 + nextSat->tm_year << endl;
 }
 
-void HealthCareManagement::showSchedule(const string &un, const string &pw)
+void Staff::showSchedule(const string &un, const string &pw)
 {
     for (int i = 0; i < this->doctorSize; i++)
     {
@@ -309,8 +314,8 @@ void HealthCareManagement::showSchedule(const string &un, const string &pw)
         if (doctor.getUsername().compare(un) == 0 && doctor.getPassword().compare(pw) == 0)
         {
 
-            Patient* ps = doctor.getPatients();
-            
+            Patient *ps = doctor.getPatients();
+
             for (int j = 0; j < doctor.size; j++)
             {
                 cout << ps[j];
@@ -319,8 +324,9 @@ void HealthCareManagement::showSchedule(const string &un, const string &pw)
     }
 }
 
-bool HealthCareManagement::sign_in_Patient(const string &username, const string &password)
+bool Staff::sign_in_Patient(const string &username, const string &password)
 {
+   
     getUsernames();
     for (int i = 0; i < this->patientSize; i++)
     {
@@ -333,7 +339,7 @@ bool HealthCareManagement::sign_in_Patient(const string &username, const string 
     return false;
 }
 
-bool HealthCareManagement::sign_in_Doctor(const string &username, const string &password)
+bool Staff::sign_in_Doctor(const string &username, const string &password)
 {
     for (int i = 0; i < this->doctorSize; i++)
     {
@@ -346,7 +352,7 @@ bool HealthCareManagement::sign_in_Doctor(const string &username, const string &
     return false;
 }
 
-void HealthCareManagement::menuForPatient()
+void Staff::menuForPatient()
 {
     string pathName = "D://code at school//PBL2//DoctorsData";
     int choose1;
@@ -369,6 +375,7 @@ void HealthCareManagement::menuForPatient()
             break;
         case 2:
             system("cls");
+            cout << "------------ Đăng nhập -------------\n";
             cout << "Nhập username: ";
             cin >> un;
             cout << "Nhập password: ";
@@ -396,7 +403,7 @@ void HealthCareManagement::menuForPatient()
     } while (choose1 != 3);
 }
 
-void HealthCareManagement::menuForDoctor()
+void Staff::menuForDoctor()
 {
     string pathName = "D://code at school//PBL2//DoctorsData";
     int choose;
@@ -414,6 +421,7 @@ void HealthCareManagement::menuForDoctor()
         {
             system("cls");
             this->init(pathName);
+            cout << "-------- Đăng nhập ---------\n";
             cout << "Nhập username: ";
             cin >> un;
             cout << "Nhập password: ";
@@ -426,13 +434,14 @@ void HealthCareManagement::menuForDoctor()
                 cout << "Vui lòng chọn chức năng bạn muốn sử dụng:";
                 cin.ignore();
                 cin >> choose2;
-                
-                switch(choose2){
-                    case 1: system("cls");
-                            showSchedule(un, pw);
-                            break;
+
+                switch (choose2)
+                {
+                case 1:
+                    system("cls");
+                    showSchedule(un, pw);
+                    break;
                 }
-                
             }
             else
                 cout << "Tài khoản mật khẩu không chính xác\n";
@@ -448,11 +457,11 @@ void HealthCareManagement::menuForDoctor()
     } while (true);
 }
 
-void HealthCareManagement::menu()
+void Staff::menu()
 {
     cout << "|------------------------------- PBL2 -------------------------------|\n";
     cout << "|-------------------- Quản Lý Đặt Lịch Khám Bệnh --------------------|\n";
-    cout << "- Giáo Viên Hướng Dẫn : Trần Hồ Thủy Tiên. \n";
+    cout << "- Giáo Viên Hướng Dẫn : ThS.Trần Hồ Thủy Tiên. \n";
     cout << "Danh sách sinh viên thực hiên:\n";
     cout << "1. Trần Phước Thành\n";
     cout << "2. Huỳnh Vũ Huy\n";
@@ -487,7 +496,7 @@ void HealthCareManagement::menu()
     } while (choose != 3);
 }
 
-void HealthCareManagement::usernameStoring(Patient &p)
+void Staff::usernameStoring(Patient &p)
 {
     string pathName = "D://code at school//PBL2//patientsData";
     ofstream outputFile(pathName, ios_base::app);
@@ -503,7 +512,7 @@ void HealthCareManagement::usernameStoring(Patient &p)
     outputFile.close();
 }
 
-void HealthCareManagement::getUsernames()
+void Staff::getUsernames()
 {
     string pathName = "D://code at school//PBL2//patientsData";
     ifstream file(pathName);
@@ -538,3 +547,4 @@ void HealthCareManagement::getUsernames()
         }
     }
 }
+

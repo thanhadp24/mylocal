@@ -1,9 +1,9 @@
-#include "HealthCareManagement.h"
+#include "Staff.h"
 using namespace std;
 
 int main()
 {
-    HealthCareManagement h;
+    Staff h;
     h.menu();
     
     return 0;

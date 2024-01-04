@@ -1,18 +1,18 @@
 #include "Patient.h"
 
-// const int MAX = 10;
+const int MAX = 10;
 class Doctor : public Person
 {
 private:
     string id;
     string faculty;
     string workingTime;
-    // Patient patients[MAX];
+    Patient patients[MAX];
 
 public:
     int size;
     Doctor(string = "0", string = "", string = "", int = 0, string = "", string = "", string = "", string = "", string = "");
-    ~Doctor();
+    virtual ~Doctor();
     void setId(string = "");
     string getId();
     
@@ -23,7 +23,6 @@ public:
     string getWorkingTime();
 
     void addPatient(Patient&);
-    void removePatient(const int = 1);
 
     Patient* getPatients();
     friend ostream& operator<< (ostream& ,const Doctor&);

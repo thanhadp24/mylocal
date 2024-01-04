@@ -72,10 +72,6 @@ ostream &operator<<(ostream &o, const Doctor &d)
     return o;
 }
 
-// bool Doctor::isEmpty()
-// {
-//     return (this->size == 0);
-// }
 Patient *Doctor::getPatients()
 {
     Patient* res = new Patient[100];
