@@ -1,6 +1,6 @@
 #include "Patient.h"
 
-const int MAX = 10;
+const int MAX = 100;
 class Doctor : public Person
 {
 private:

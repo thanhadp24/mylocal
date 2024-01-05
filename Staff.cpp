@@ -10,6 +10,8 @@ Staff::~Staff() {}
 
 void Staff::init(const string &pathName)
 {
+    this->doctorSize = 0;
+    this->patientSize = 0;
     ifstream file(pathName);
     string line;
     if (!file)
@@ -90,7 +92,7 @@ void Staff::sign_up()
     cout << "----------- Đăng ký ------------\n";
     cin.ignore();
     cout << "Nhập họ tên bệnh nhân: ";
-    cin >> fn;
+    getline(cin, fn);
    
     cout << "Nhập giới tính: ";
     cin >> gender;
@@ -99,7 +101,7 @@ void Staff::sign_up()
     cin >> age;
     cin.ignore();
     cout << "Nhập địa chỉ: ";
-    cin >> address;
+    getline(cin, address);
     
     
     bool check = false;
@@ -197,12 +199,14 @@ void Staff::chooseDoctor(const string &faculty, const string &un, const string &
 
     string choose;
     cout << "\nChọn bác sĩ theo id: ";
+    cin.ignore();
     cin >> choose;
-    string datetime;
+    cin.ignore();
     bool check = true;
     do
     {
         cout << "Chọn thời gian khám theo định dạng (dd/MM/yyyy hh): ";
+        string datetime;
         getline(cin, datetime);
         if (isValidDatetime(datetime, choose, faculty))
         {
@@ -224,6 +228,7 @@ void Staff::chooseDoctor(const string &faculty, const string &un, const string &
             cout << "Thời gian này đã có người đặt!\n";
         }
     } while (check);
+    getchar();
 }
 
 bool Staff::isValidDatetime(const string &datetime, const string &id, const string &faculty)
@@ -253,6 +258,7 @@ void Staff::showFacultySchedule(const string &faculty)
     workingTimeInWeek();
     for (int i = 0; i < this->doctorSize; i++)
     {
+        
         Doctor doctor = this->doctors[i];
         string facultyOfDoctor = doctor.getFaculty();
         if (facultyOfDoctor.compare(faculty) == 0)
@@ -267,10 +273,9 @@ void Staff::workingTimeInWeek()
     // Lấy thời gian hiện tại
     time_t now = time(0);
     tm *ltm = localtime(&now);
-
-    time_t nextDay = now + 24 * 60 * 60;
-    tm *next = localtime(&nextDay);
+    
     // Tìm ngày hiện tại
+    string now1;
     cout << "Từ: ";
     switch (ltm->tm_wday)
     {
@@ -279,31 +284,37 @@ void Staff::workingTimeInWeek()
         break;
     case 1:
         cout << "Thứ hai ";
+        now1 = "Thứ hai";
         break;
     case 2:
         cout << "Thứ ba ";
+        now1 = "Thứ ba";
         break;
     case 3:
         cout << "Thứ tư ";
+        now1 = "Thứ tư";
         break;
     case 4:
         cout << "Thứ năm ";
+        now1 = "Thứ năm";
         break;
     case 5:
         cout << "Thứ sáu ";
+        now1 = "Thứ sáu";
         break;
     case 6:
         cout << "Thứ bảy ";
+        now1 = "Thứ bảy";
         break;
     }
     cout << ltm->tm_mday << "/" << 1 + ltm->tm_mon << "/" << 1900 + ltm->tm_year;
 
-    // Tìm ngày thứ bảy trong tuần hiện tại
+    // Tìm ngày khám tuần sau
     int daysUntilSaturday = 6 - ltm->tm_wday;
     time_t nextSaturday = now + daysUntilSaturday * 24 * 60 * 60;
     tm *nextSat = localtime(&nextSaturday);
 
-    cout << " đến thứ bảy: " << nextSat->tm_mday << "/" << 1 + nextSat->tm_mon << "/" << 1900 + nextSat->tm_year << endl;
+    cout << " đến " << now1 << " : " << ltm->tm_mday + 6 << "/" << 1 + ltm->tm_mon << "/" << 1900 + ltm->tm_year << endl;
 }
 
 void Staff::showSchedule(const string &un, const string &pw)
@@ -322,6 +333,7 @@ void Staff::showSchedule(const string &un, const string &pw)
             }
         }
     }
+    getchar();
 }
 
 bool Staff::sign_in_Patient(const string &username, const string &password)
@@ -354,7 +366,7 @@ bool Staff::sign_in_Doctor(const string &username, const string &password)
 
 void Staff::menuForPatient()
 {
-    string pathName = "D://code at school//PBL2//DoctorsData";
+    string pathName = "D://code at school//PBL22//mylocal//DoctorsData";
     int choose1;
     string un, pw;
     do
@@ -384,6 +396,7 @@ void Staff::menuForPatient()
             {
                 system("cls");
                 int choose2;
+                cout << "Chào mừng bạn đến với ứng dụng đặt lịch khám bệnh online\n";
                 cout << "1. Đăng ký lịch khám bệnh\n";
                 cout << "2. Thoát\n";
                 cout << "Vui lòng chọn chức năng bạn muốn sử dụng:";
@@ -405,7 +418,7 @@ void Staff::menuForPatient()
 
 void Staff::menuForDoctor()
 {
-    string pathName = "D://code at school//PBL2//DoctorsData";
+    string pathName = "D://code at school//PBL22//mylocal//DoctorsData";
     int choose;
     int choose2;
     string un, pw;
@@ -429,6 +442,7 @@ void Staff::menuForDoctor()
             if (sign_in_Doctor(un, pw))
             {
                 system("cls");
+                cout << "Chào mừng đến với chức năng của bác sĩ\n";
                 cout << "1. Lịch khám trong tuần\n";
                 cout << "2. Thoát\n";
                 cout << "Vui lòng chọn chức năng bạn muốn sử dụng:";
@@ -439,7 +453,10 @@ void Staff::menuForDoctor()
                 {
                 case 1:
                     system("cls");
+                    cout << "Danh sách bệnh nhân khám bệnh:\n";
                     showSchedule(un, pw);
+                    getchar();
+                    system("cls");
                     break;
                 }
             }
@@ -461,7 +478,7 @@ void Staff::menu()
 {
     cout << "|------------------------------- PBL2 -------------------------------|\n";
     cout << "|-------------------- Quản Lý Đặt Lịch Khám Bệnh --------------------|\n";
-    cout << "- Giáo Viên Hướng Dẫn : ThS.Trần Hồ Thủy Tiên. \n";
+    cout << "Giáo Viên Hướng Dẫn : ThS.Trần Hồ Thủy Tiên. \n";
     cout << "Danh sách sinh viên thực hiên:\n";
     cout << "1. Trần Phước Thành\n";
     cout << "2. Huỳnh Vũ Huy\n";
@@ -498,7 +515,7 @@ void Staff::menu()
 
 void Staff::usernameStoring(Patient &p)
 {
-    string pathName = "D://code at school//PBL2//patientsData";
+    string pathName = "D://code at school//PBL22//mylocal//patientsData";
     ofstream outputFile(pathName, ios_base::app);
 
     if (!outputFile.is_open())
@@ -514,7 +531,7 @@ void Staff::usernameStoring(Patient &p)
 
 void Staff::getUsernames()
 {
-    string pathName = "D://code at school//PBL2//patientsData";
+    string pathName = "D://code at school//PBL22//mylocal//patientsData";
     ifstream file(pathName);
     string line;
     if (!file)

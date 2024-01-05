@@ -42,7 +42,7 @@ string Doctor::getWorkingTime()
 
 void Doctor::addPatient(Patient &p)
 {
-    string pathName = "D://code at school//PBL2//output";
+    string pathName = "D://code at school//PBL22//mylocal//output";
     ofstream outputFile(pathName, ios_base::app);
 
     if (!outputFile.is_open())
@@ -51,7 +51,7 @@ void Doctor::addPatient(Patient &p)
         return;
     }
     outputFile << this->id << "," << p.getFullName() << "," << p.getGender() << "," 
-    << p.getAge() << "," << p.getAddress() << "," << p.getDatetime() << endl;
+    << p.getAge() << "," << p.getAddress() << "," << p.getDatetime() << "h" <<  endl;
     this->size++;
     outputFile.close();
 }
@@ -75,7 +75,7 @@ ostream &operator<<(ostream &o, const Doctor &d)
 Patient *Doctor::getPatients()
 {
     Patient* res = new Patient[100];
-    string pathName = "D://code at school//PBL2//output";
+    string pathName = "D://code at school//PBL22//mylocal//output";
     ifstream file(pathName);
     string line;
     if (!file)
