@@ -1,0 +1,9 @@
+.error, .red {
+	color: red;
+}
+.green {
+	color: green;
+}
+form div {
+	margin: 10px 0;
+}

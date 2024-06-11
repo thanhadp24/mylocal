@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.center {
+	text-align: center;
+}
+
+.bg-error {
+	color: red;
+}
+
+#runner {
+		color: red;
+}
+
+.form-signin div {
+	margin: 10px 0;
+}

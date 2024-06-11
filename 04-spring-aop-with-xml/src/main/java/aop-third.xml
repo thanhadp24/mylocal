@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Step 3: create, configure aspect proxy(joinPoint, advice) -->
+
+	<!-- 1.Define JoinPoint -->
+	<bean id="movieService" class="com.spring.service.MovieService">
+		<property name="name" value="Avatar"></property>
+		<property name="catalog" value="Adventure"></property>
+	</bean>
+	
+	<!-- 2.Define advisor -->
+	<bean id="movieBeforeAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="movieServiceAroundAdvice"></property>
+		<property name="pointcut" ref="namedMatchPointCut"></property>
+	</bean>
+	
+	<!-- 2.1 Define advice -->
+	<bean id="movieServiceBeforeAdvice" class="com.spring.aop.MovieAopBeforeAdvice"></bean>
+	<bean id="movieServiceAfterAdvice" class="com.spring.aop.MovieAopAfterAdvice"></bean>
+	<bean id="movieServiceAroundAdvice" class="com.spring.aop.MovieAopAroundAdvice"></bean>
+	
+	<!-- 2.2 Define pointcut-->
+	<bean id="namedMatchPointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="printName"></property>
+	</bean>
+	
+	
+	
+	<!--<bean id="movieAfterAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="movieServiceAfterAdvice"></property>
+		<property name="pointcut" ref="namedMatchPointCut"></property>
+	</bean>-->
+	
+	<!-- 3.auto Aop Proxy -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"></bean>
+	
+</beans>

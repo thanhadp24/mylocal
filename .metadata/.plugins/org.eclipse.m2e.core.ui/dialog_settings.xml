@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\java-at-home\6. Spring\09-spring-mvc-webapp"/>
+			<item value="D:\java-at-home\6. Spring\07-spring-mvc-form-validation\pom.xml"/>
+			<item value="D:\java-at-home\6. Spring\10-spring-security-demo"/>
+			<item value="D:\java-at-home\6. Spring\spring-aop-01\src\main\java\aop-third.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.java10.sdf"/>
+			<item value="com.java10.dfasf"/>
+			<item value="com.java10._spring_rest"/>
+			<item value="com.java10._spring_rest_demo"/>
+			<item value="com.java10.fsf"/>
+			<item value="com.java10.java11_spring_rest_demo"/>
+			<item value="com.security._spring_security_demo"/>
+			<item value="com.security.securiy10_spring_demo"/>
+			<item value="com.spring.mvc._spring_mvc_webapp"/>
+			<item value="com.spring.mvc._spring_mvc_with_annotation"/>
+		</list>
+		<list key="groupId">
+			<item value="com.java10"/>
+			<item value="com.security"/>
+			<item value="com.spring.mvc"/>
+		</list>
+		<list key="artifactId">
+			<item value="sdf"/>
+			<item value="dfasf"/>
+			<item value="11-spring-rest"/>
+			<item value="11-spring-rest-demo"/>
+			<item value="11fsf"/>
+			<item value="java11-spring-rest-demo"/>
+			<item value="10-spring-security-demo"/>
+			<item value="securiy10-spring-demo"/>
+			<item value="09-spring-mvc-webapp"/>
+			<item value="08-spring-mvc-with-annotation"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="--"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.spring.mvc"/>
+			<item value="com.springmvc"/>
+		</list>
+		<list key="name">
+			<item value="spring mvc using xml configure"/>
+		</list>
+		<list key="artifactId">
+			<item value="07-spring-mvc-form-validation"/>
+			<item value="06-spring-mvc-with-xml"/>
+		</list>
+		<list key="version">
+			<item value="1.0-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.languageserver.languages.springboot.file.logging.enabled=true
+org.eclipse.languageserver.languages.springboot.stderr.logging.enabled=true
