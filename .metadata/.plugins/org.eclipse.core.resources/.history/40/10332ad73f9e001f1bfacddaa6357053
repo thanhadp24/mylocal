@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Login</title>
+	
+	<!--path relative - must use thymeleaf to generate path -->
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+	
+<div class="container-fluid">
+	
+	<div>
+		<img th:src="@{/images/ShopmeAdminBig.png}">
+	</div>
+	
+	<form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
+		<div class="border border-secondary">
+			<p>Login to shopapp</p>
+			<div>
+				<input type="email" placeholder="Enter your email">
+			</div>
+			<div>
+				<input type="password" placeholder="">
+			</div>
+		</div>
+	</form>
+	
+	<div>
+		<p>Shopapp control panel - Copyright &copy; Shopapp 2024</p>
+	</div>
+</div>
+
+
+</body>
+</html>

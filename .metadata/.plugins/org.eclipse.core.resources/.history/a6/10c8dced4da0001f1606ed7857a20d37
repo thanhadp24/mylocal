@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments:: page_head('Categories Manager')">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div th:replace="navigation:: navbar"></div>
+
+		<div>
+			<h2 class="text-primary">Manage Categories</h2>
+			<a th:href="@{/categories/new}" class="fa-solid fa-user-plus fa-lg icon-gray"></a>&nbsp;&nbsp;
+			<a th:href="@{/categories/export/csv}" class="fa-solid fa-file-csv fa-lg icon-gray"></a>
+		</div>
+	
+		<div>
+			<form th:action="@{/category/page/1}" class="form-inline m-3">
+				<input type="hidden" name="sortField" th:value="${sortField}">
+				<input type="hidden" name="sortDir" th:value="${sortDir}">
+				Filter:&nbsp;
+				<input type="text" name="keyword" th:value="${keyword}" class="form-control field-search" required>
+				&nbsp;&nbsp;
+				<button type="submit" class="btn btn-primary">
+					<i class="fa-solid fa-magnifying-glass fa-lg"></i>
+				</button>
+				&nbsp;&nbsp;
+				<button type="button" value="Clear" class="btn btn-secondary" onclick="clearFilter()">
+					<i class="fa-solid fa-eraser fa-lg"></i>
+				</button>
+			</form>
+		</div>
+		
+		<div class="alert alert-success text-center" th:if="${message}">[[${message}]]</div>
+		
+		<div class="full-details">
+			<table class="table table-responsive-xl table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<td class="text-center">ID</td>
+						<td>Category Image</td>
+						<td>Category Name</td>
+						<td>Alias</td>
+						<td>Enabled</td>
+						<td>Action</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="category: ${categories}">
+						<td class="text-center">[[${category.id}]]</td>
+						<td>
+							<img th:src="@{${category.imagePath}}" width="100px" class="img-fluid">
+						</td>
+						<td>[[${category.name}]]</td>
+						<td>[[${category.alias}]]</td>
+						<td>
+							<a th:replace="fragments:: category_enable"></a>
+							<a th:replace="fragments:: category_disable"></a>
+						</td>
+						<td>
+							<a th:replace="fragments:: edit_category"></a>
+							<a th:replace="fragments:: delete_category"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div th:replace="fragments:: footer"></div>
+	</div>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.link-delete').on('click',function(e){
+			e.preventDefault();
+			
+			link = $(this);
+			userId = link.attr('userId');
+			$('#yes-btn').attr("href", link.attr("href"));
+			$('#confirmText').text('Are you sure to delete user ID: ' + userId + "?");
+			$('#confirmModal').modal();
+		})
+	})
+	
+	function clearFilter(){
+		window.location = "[[@{/categories}]]"
+	}
+	</script>
+
+</body>
+</html>

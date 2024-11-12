@@ -1,0 +1,23 @@
+package com.shopapp.admin.service;
+
+import java.util.List;
+
+import com.shopapp.admin.exception.CategoryNotFoundException;
+import com.shopapp.common.entity.Category;
+
+public interface CategoryService {
+	
+	List<Category> getAll();
+	
+	List<Category> getCategoryUsedInForm();
+	
+	Category save(Category category);
+	
+	Category get(int id) throws CategoryNotFoundException;
+	
+	void delete(int id);
+	
+	String checkUnique(Integer id, String name, String alias);
+
+	void updateEnabledStatus(Integer id, boolean enable);
+}

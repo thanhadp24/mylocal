@@ -1,0 +1,31 @@
+1730470969240	Delete element
+1730471184422	Rename package 'com.shopapp'
+1730471503274	Delete element
+1730472465410	Copy folder
+1730475513422	Rename resource '003 ShopmeAdminSmall.png'
+1730479935731	Move compilation unit
+1730479937765	Move compilation unit
+1730480070235	Move compilation unit
+1730480204683	Delete element
+1730481136099	Delete element
+1730481139477	Delete element
+1730481143771	Delete element
+1730481146678	Delete element
+1730481154813	Move compilation unit
+1730481162849	Rename package 'com.shopapp.admin.controller'
+1730481731802	Delete element
+1730481732737	Delete element
+1730481734646	Delete element
+1730481743701	Rename package 'com.shopapp.admin.user'
+1730482099005	Delete element
+1730482325648	Rename package 'com.shopapp.admin.dao'
+1730482330017	Delete element
+1730482343363	Rename type 'RoleDao'
+1730482349625	Rename type 'UserDao'
+1730516135201	Rename package 'com.shopapp.admin.repository'
+1730516149955	Rename package 'com.shopapp.admin.service'
+1730516399475	Rename type 'UserService'
+1730517502005	Rename package 'com.shopapp.admin.user.service'
+1730517508945	Rename package 'com.shopapp.admin.user.repository'
+1730517514735	Rename package 'com.shopapp.admin.user.controller'
+1730517528586	Move compilation unit

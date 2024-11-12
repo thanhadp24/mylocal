@@ -1,0 +1,5 @@
+package com.shopapp.admin.utils;
+
+public class CloseUtil {
+
+}

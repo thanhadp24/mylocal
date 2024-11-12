@@ -1,0 +1,5 @@
+package com.shopapp.common.entity;
+
+public class Category {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ShopappWebParent/category-image&apos; to &apos;category-images&apos;" description="Rename resource &apos;category-image&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="category-image" name="category-images" stamp="1731315992088" updateReferences="true"/>
+</session>

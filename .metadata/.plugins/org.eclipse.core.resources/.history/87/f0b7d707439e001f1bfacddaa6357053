@@ -1,0 +1,39 @@
+package com.shopapp.admin.security;
+
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.shopapp.common.entity.User;
+
+public class ShopappUserDetails implements UserDetails{
+
+	private User user;
+	
+	public ShopappUserDetails() {
+		this.user = user;
+	}
+	
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return (Collection<? extends GrantedAuthority>) user.getRoles()
+			.stream()
+			.filter(role -> new SimpleGrantedAuthority(role.getName()))
+			.toList();
+	}
+
+	@Override
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

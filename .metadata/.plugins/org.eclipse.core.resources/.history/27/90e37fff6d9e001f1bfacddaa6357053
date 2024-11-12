@@ -1,0 +1,25 @@
+package com.shopapp.admin.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.embedded.undertow.UndertowServletWebServer;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.shopapp.admin.security.ShopappUserDetails;
+import com.shopapp.admin.service.UserService;
+import com.shopapp.common.entity.User;
+
+@Controller
+public class AccountController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/account")
+	public String viewDetails(@AuthenticationPrincipal ShopappUserDetails loggedUser) {
+		String email = loggedUser.getUsername();
+		User user = userService.getUserByEmail(email);
+		return "user-form";
+	}
+}

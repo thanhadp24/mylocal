@@ -1,0 +1,17 @@
+
+$(document).ready(function() {
+	$('#logoutLink').on('click', function(e) {
+		e.preventDefault();
+		document.logoutForm.submit();
+	})
+	
+	customizeDropdown();
+})
+
+function customizeDropdown(){
+	$('.dropdown > a').click(function(){
+		location.href = this.href;
+	})
+}
+
+

@@ -1,0 +1,11 @@
+package com.shopapp.admin.category;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.springframework.boot.test.mock.mockito.MockBeans;
+
+@MockBeans
+@ExtendWith(Mockito)
+public class CategoryServiceTest {
+
+}

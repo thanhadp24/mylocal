@@ -1,0 +1,15 @@
+package com.shopapp.admin.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.shopapp.admin.utils.UserCsvExporter;
+
+@Controller
+public class CsvController {
+
+	@GetMapping("/users/export/csv")
+	public void exportCsv() {
+		UserCsvExporter exporter = new UserCsvExporter();
+	}
+}
