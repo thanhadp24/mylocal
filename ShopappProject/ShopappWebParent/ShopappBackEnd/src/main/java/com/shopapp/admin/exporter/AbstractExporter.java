@@ -8,10 +8,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public abstract class AbstractExporter {
 	
-	void setResponseHeader(HttpServletResponse response,String contentType, String extension) {
+	void setResponseHeader(HttpServletResponse response,String contentType, 
+			String prefix, String extension) {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
 		String timestamp = format.format(new Date());
-		String fileName = "Users_" + timestamp + extension;
+		String fileName = prefix + timestamp + extension;
 		
 		response.setContentType(contentType);
 

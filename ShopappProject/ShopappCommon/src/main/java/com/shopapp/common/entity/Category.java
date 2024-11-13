@@ -1,6 +1,6 @@
 package com.shopapp.common.entity;
 
-import java.beans.Transient;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "categories")
@@ -69,6 +70,7 @@ public class Category {
 		copy.setAlias(category.getAlias());
 		copy.setImage(category.getImage());
 		copy.setEnabled(category.isEnabled());
+		copy.setHasChildren(category.getChildren().size() > 0);
 		
 		return copy;
 	}
@@ -156,12 +158,22 @@ public class Category {
 	@Transient
 	public String getImagePath() {
 		if(id == null) return "/images/image-thumbnail.png";
-		return "/category-images/" + this.id + "/" + this.getImage();
+		return "/categories-images/" + this.id + "/" + this.getImage();
 	}
-
+	
+	public boolean isHasChildren() {
+		return hasChildren;
+	}
+	
+	public void setHasChildren(boolean hasChildren) {
+		this.hasChildren = hasChildren;
+	}
+	
+	@Transient
+	private boolean hasChildren;
+	
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", alias=" + alias + ", image=" + image + ", enabled="
-				+ enabled + "]";
+		return this.name;
 	}
 }

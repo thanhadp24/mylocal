@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,11 +16,15 @@ import com.shopapp.common.entity.Category;
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
 	
 	@Query("SELECT c FROM Category c WHERE c.parent.id is NULL")
-	public List<Category> getRootCategories();
+	public List<Category> getRootCategories(Sort sort); // use form select
+	
+	@Query("SELECT c FROM Category c WHERE c.parent.id is NULL")
+	public Page<Category> getRootCategories(Pageable pageable); // use in list category
 		
-	@Query("SELECT c FROM Category c WHERE CONCAT(c.id, ' ', c.name, ' ', c.alias) LIKE '%:keyword%'")
-	public Page<Category> findAll(String keyword, Pageable pageable);
 
+	@Query("SELECT c FROM Category c WHERE c.name LIKE %:keyword%")
+	public Page<Category> search(String keyword, Pageable pageable);
+	
 	public Category findByName(String name);
 	
 	public Category findByAlias(String alias);

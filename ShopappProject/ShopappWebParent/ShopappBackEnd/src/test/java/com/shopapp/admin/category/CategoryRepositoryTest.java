@@ -28,10 +28,7 @@ public class CategoryRepositoryTest {
 		System.out.println(category);
 	}
 	
-	@Test
-	public void testGetRoot() {
-		repo.getRootCategories().forEach(c -> System.out.println(c.getName()));
-	}
+	
 	
 	@Test
 	public void testCreateRootCategory() {

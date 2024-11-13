@@ -1,0 +1,10 @@
+package com.shopapp.admin.service;
+
+import java.util.List;
+
+import com.shopapp.common.entity.Brand;
+
+public interface BrandService {
+	
+	List<Brand> getAll();
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments:: page_head('Categories Manager')">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div th:replace="navigation:: navbar"></div>
+
+		<div>
+			<h2 class="text-primary">Manage Categories</h2>
+			<a th:href="@{/categories/new}" class="fa-solid fa-user-plus fa-lg icon-gray"></a>&nbsp;&nbsp;
+			<a th:href="@{/categories/export/csv}" class="fa-solid fa-file-csv fa-lg icon-gray"></a>
+		</div>
+	
+		<div th:replace="fragments:: search('/categories')"></div>
+		
+		<div class="alert alert-success text-center" th:if="${message}">[[${message}]]</div>
+		
+		<div class="full-details">
+			<table class="table table-responsive-xl table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<td class="text-center">ID</td>
+						<td>Category Image</td>
+						<td>
+							<a class="text-dark" 
+							th:href="@{'/categories/page/' + ${currentPage} + '?sortDir=' + ${sortDir}
+							+ ${keyword != null ? '&keyword='+keyword:''}}">
+							Category Name</a>
+							<span th:class="${sortDir == 'desc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+						</td>
+						<td>Alias</td>
+						<td>Enabled</td>
+						<td>Action</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="category: ${categories}">
+						<td class="text-center">[[${category.id}]]</td>
+						<td>
+							<img th:src="@{${category.imagePath}}" width="100px" class="img-fluid">
+						</td>
+						<td>[[${category.name}]]</td>
+						<td>[[${category.alias}]]</td>
+						<td>
+							<a th:replace="fragments:: category_status"></a>
+						</td>
+						<td>
+							<a th:replace="fragments:: category_action"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div th:replace="fragments:: pagination('/categories', 'categories')"></div>
+ 
+		<div th:replace="modal_fragments:: modal_confirm"></div>
+
+		<div th:replace="fragments:: footer"></div>
+	</div>
+
+	<script th:src="@{/js/common_link.js}"></script>
+	<script>
+		moduleURL = "[[@{/categories}]]";
+		$(document).ready(function() {
+			$(".link-delete").on('click', function(e){
+				e.preventDefault();
+				confirmDeleteModal($(this), 'category');
+			})
+		})
+	</script>
+
+</body>
+</html>

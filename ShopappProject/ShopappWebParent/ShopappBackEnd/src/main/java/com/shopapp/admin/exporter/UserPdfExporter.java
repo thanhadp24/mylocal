@@ -20,7 +20,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class UserPdfExporter extends AbstractExporter{
 
 	public void exportPdfFile(List<User> users, HttpServletResponse response) throws IOException {
-		super.setResponseHeader(response, "application/pdf", ".pdf");
+		super.setResponseHeader(response, "application/pdf", "Users_", ".pdf");
 		
 		Document document = new Document(PageSize.A4);
 		PdfWriter.getInstance(document, response.getOutputStream());

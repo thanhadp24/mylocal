@@ -8,6 +8,7 @@ $(document).ready(function() {
 	//customizeDropdown();
 })
 
+
 /*function customizeDropdown(){
 	
 	$('.navbar .dropdown').hover({

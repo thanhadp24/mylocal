@@ -1,0 +1,39 @@
+
+$(document).ready(function() {
+	$('#logoutLink').on('click', function(e) {
+		e.preventDefault();
+		document.logoutForm.submit();
+	})
+	
+	//customizeDropdown();
+})
+
+function confirmDeleteModal(entity, link){
+	entityId = link.attr('categoryId');
+	$('#yes-btn').attr("href", link.attr("href"));
+	$('#confirmText').text('Are you sure to delete ' + entity +' ID: ' + entityId + "?");
+	$('#confirmModal').modal();
+}
+
+	
+function clearFilter(){
+	window.location = moduleURL;
+}
+
+/*function customizeDropdown(){
+	
+	$('.navbar .dropdown').hover({
+		function(){
+			$(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+		},
+		function(){
+			$(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+		}
+	})
+	
+	$('.dropdown > a').click(function(){
+		location.href = this.href;
+	})
+}*/
+
+

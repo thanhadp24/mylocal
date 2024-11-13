@@ -1,0 +1,20 @@
+package com.shopapp.admin.bean;
+
+public class CategoryPageInfo {
+	private int totalOfPages;
+	private int totalElements;
+	public int getTotalOfPages() {
+		return totalOfPages;
+	}
+	public void setTotalOfPages(int totalOfPages) {
+		this.totalOfPages = totalOfPages;
+	}
+	public int getTotalElements() {
+		return totalElements;
+	}
+	public void setTotalElements(int totalElements) {
+		this.totalElements = totalElements;
+	}
+	
+	
+}

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -14,10 +15,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.shopapp.admin.bean.CategoryPageInfo;
+import com.shopapp.admin.common.Common;
 import com.shopapp.admin.exception.CategoryNotFoundException;
+import com.shopapp.admin.exporter.CategoryCsvExporter;
 import com.shopapp.admin.service.CategoryService;
 import com.shopapp.admin.utils.FileUploadUtil;
 import com.shopapp.common.entity.Category;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 public class CategoryController {
@@ -26,8 +32,38 @@ public class CategoryController {
 	private CategoryService categoryService;
 	
 	@GetMapping("/categories")
-	public String viewCategories(Model model) {
-		model.addAttribute("categories", categoryService.getAll());
+	public String viewCategories(@Param("sortDir") String sortDir, Model model) {
+		return viewCategoriesPerPage(sortDir, 1, null, model);
+	}
+	
+	@GetMapping("/categories/page/{pageNum}")
+	public String viewCategoriesPerPage(@Param("sortDir") String sortDir,
+			@PathVariable("pageNum") int pageNum, 
+			@Param("keyword") String keyword, Model model) {
+		if (sortDir == null || sortDir.isEmpty()) {
+			sortDir = "asc";
+		}
+		CategoryPageInfo pageInfo = new CategoryPageInfo();
+		List<Category> categories = categoryService.categoryByPage(pageNum, sortDir, pageInfo, keyword);
+
+		String reverseSortDir = (sortDir.equals("asc") ? "desc" : "asc");
+		long startCount = (pageNum - 1) * Common.ROOT_CATEGORY_PER_PAGE + 1;
+		long endCount = startCount + Common.ROOT_CATEGORY_PER_PAGE - 1;
+		
+		if(endCount > pageInfo.getTotalElements()) {
+			endCount = pageInfo.getTotalElements();
+		}
+		
+		model.addAttribute("currentPage", pageNum);
+		model.addAttribute("totalPages", pageInfo.getTotalOfPages());
+		model.addAttribute("totalItems", pageInfo.getTotalElements());
+		model.addAttribute("categories", categories);
+		model.addAttribute("sortField", "name");
+		model.addAttribute("reverseSortDir", reverseSortDir);
+		model.addAttribute("keyword", keyword);
+		model.addAttribute("startCount", startCount);
+		model.addAttribute("endCount", endCount);
+
 		return "categories/categories";
 	}
 	
@@ -51,7 +87,7 @@ public class CategoryController {
 			
 			Category savedCategory = categoryService.save(category);
 			
-			String path = "../category-images/" + savedCategory.getId();
+			String path = "../categories-images/" + savedCategory.getId();
 			
 			FileUploadUtil.cleanDir(path);
 			FileUploadUtil.saveFile(path, fileName, multipartFile);
@@ -85,6 +121,8 @@ public class CategoryController {
 		
 		try {
 			categoryService.delete(id);
+			String categoryDir = "../category-images/" + id;
+			FileUploadUtil.removeDir(categoryDir);
 			ra.addFlashAttribute("message", "Category with id " + id + " has been deleted!");
 		} catch (CategoryNotFoundException e) {
 			ra.addFlashAttribute("message", e.getMessage());
@@ -107,12 +145,15 @@ public class CategoryController {
 		return "redirect:/categories";
 	}
 	
-	@GetMapping("/categories/page/{pageNum}")
-	public String pagination(@PathVariable("pageNum") Integer pageNum) {
-		
-		
-		
-		return "redirect:/categories";
+	@GetMapping("/categories/export/csv")
+	public void exportCsv(HttpServletResponse httpServlet) {
+		List<Category> categories = categoryService.getCategoryUsedInForm();
+		CategoryCsvExporter exporter = new CategoryCsvExporter();
+		try {
+			exporter.exportCsvFile(categories, httpServlet);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 }
