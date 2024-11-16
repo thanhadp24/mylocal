@@ -1,0 +1,7 @@
+package com.shopapp.admin.exception;
+
+public class BrandRestNotFoundException extends Exception {
+
+	private static final long serialVersionUID = -6987771300342196518L;
+
+}

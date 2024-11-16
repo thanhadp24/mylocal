@@ -1,5 +1,6 @@
 package com.shopapp.admin.service.impl;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,11 @@ public class BrandServiceImpl implements BrandService {
 	@Autowired
 	private BrandRepository brandRepository;
 
+	@Override
+	public List<Brand> getAll() {
+		return brandRepository.findAll();
+	}
+	
 	@Override
 	public Page<Brand> getByPage(int pageNum, String sortField, String sortDir, String keyword) {
 		Sort sort = Sort.by(sortField);

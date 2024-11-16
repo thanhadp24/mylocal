@@ -1,0 +1,5 @@
+package com.shopapp.admin.repository;
+
+public class ProductRepository {
+
+}

@@ -5,6 +5,8 @@
 	<list key="replacehistory">
 	</list>
 	<list key="searchhistory">
+		<item value="name"/>
+		<item value="brand"/>
 		<item value="user"/>
 		<item value=" scope=&quot;column&quot;"/>
 	</list>

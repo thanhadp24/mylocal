@@ -1,0 +1,5 @@
+package com.shopapp.admin.product;
+
+public class TestProductRepository {
+
+}

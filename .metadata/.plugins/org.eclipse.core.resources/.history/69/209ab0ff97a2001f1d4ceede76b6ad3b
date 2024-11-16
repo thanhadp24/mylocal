@@ -1,0 +1,23 @@
+package com.shopapp.common.entity;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "products")
+public class Product {
+	private Integer id;
+	private String name;
+	private String alias;
+	private String shortDescription;
+	private String fullDescription;
+	private Date createdAt;
+	private Date updatedAt;
+	private boolean enabled;
+	private boolean inStock;
+	private float cost;
+	private float price;
+	private float discountPercent;
+}

@@ -1,0 +1,5 @@
+package com.shopapp.admin.service.impl;
+
+public class ProductServiceImpl {
+
+}

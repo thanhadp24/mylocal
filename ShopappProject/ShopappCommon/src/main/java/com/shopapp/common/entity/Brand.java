@@ -42,6 +42,12 @@ public class Brand {
 		this.name = name;
 		this.logo = "brand-default.png";
 	}
+	
+	public Brand(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
 
 	public Integer getId() {
 		return id;
@@ -80,9 +86,10 @@ public class Brand {
 		if(this.id == null) return "/images/image-thumbnail.png";
 		return "/brand-logos/" + this.id + "/" + this.logo;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Brand [id=" + id + ", name=" + name + ", categories=" + categories + "]";
+		return "Brand [id=" + id + ", name=" + name + ", logo=" + logo + ", categories=" + categories + "]";
 	}
+	
 }
