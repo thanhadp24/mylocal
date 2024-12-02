@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments:: page_head(${pageTitle})">
+<head>
+	<head th:replace="fragments:: page_head(${pageTitle}, 'tag')" />
+	<link rel="stylesheet" th:href="@{/richtext/richtext.min.css}">	
+	<script th:src="@{/richtext/jquery.richtext.min.js}"></script>	
+</head>
+
 <body>
 	
 <div class="container-fluid">
@@ -10,8 +15,11 @@
 	</div>
 	
 	<form th:action="@{/products/save}"  method="post"
-			th:object="${product}" onsubmit="return checkUniqueEmail(this);" 
+			th:object="${product}" onsubmit="return checkUniqueProductName(this);" 
 			enctype="multipart/form-data">
+			<input type="hidden" th:field=*{id}>
+			<input type="hidden" th:if="${product.category != null}" 
+				th:value="${product.category.id}" id="categoryId">
 			<!-- tab-header -->
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item"><a class="nav-link active"
@@ -25,6 +33,9 @@
 				<li class="nav-item"><a class="nav-link" 
 					data-toggle="tab" href="#details" role="tab"
 					>Details</a></li>
+				<li class="nav-item"><a class="nav-link" 
+				data-toggle="tab" href="#shipping" role="tab"
+				>Shipping</a></li>
 			</ul>
 
 			<!-- tab-panels -->
@@ -32,9 +43,47 @@
 				<div class="tab-pane active p-3" id="overview" role="tabpanel">
 					<div th:replace="products/product_overview:: content"></div>
 				</div>
-				<div class="tab-pane" id="description" role="tabpanel">desc</div>
-				<div class="tab-pane" id="images" role="tabpanel">images</div>
-				<div class="tab-pane" id="details" role="tabpanel">detail</div>
+				<div class="tab-pane" id="description" role="tabpanel">
+					<th:block sec:authorize="hasAnyAuthority('Salesperson')">
+						<div th:replace="products/product_description_read_only:: content"></div>
+					</th:block>
+					<th:block sec:authorize="hasAnyAuthority('Admin','Editor')">
+						<div th:replace="products/product_description:: content"></div>
+					</th:block>
+				</div>
+				<div class="tab-pane" id="images" role="tabpanel">
+					<th:block sec:authorize="hasAnyAuthority('Salesperson')">
+						<div th:replace="products/product_images_read_only::content"></div>
+					</th:block>
+					<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+						<div th:replace="products/product_images:: content"></div>
+					</th:block>
+				</div>
+				<div class="tab-pane" id="details" role="tabpanel">
+					<th:block sec:authorize="hasAnyAuthority('Salesperson')">
+						<div th:replace="products/product_details_read_only::content"></div>
+					</th:block>
+					<th:block sec:authorize="hasAnyAuthority('Admin','Editor')">
+						<div th:replace="products/product_details:: content"></div>
+						<div class="mt-2">
+							<input type="button" class="btn btn-secondary"
+								value="Add more detail?" onclick="addMoreDetail()">
+						</div>
+					</th:block>
+				</div>
+				<div class="tab-pane p-3" id="shipping" role="tabpanel">
+					<th:block sec:authorize="hasAnyAuthority('Salesperson')">
+						<div th:replace="products/product_shipping_read_only::content"></div>
+					</th:block>
+					<th:block sec:authorize="hasAnyAuthority('Admin','Editor')">
+						<div th:replace="products/product_shipping:: content"></div>
+					</th:block>
+				</div>
+				<div class="text-center m-2 p-2">
+					<input type="submit" value="Save" class="btn btn-primary">
+					<input type="button" value="Cancel" id="btn-cancel"
+						class="btn btn-danger">
+				</div>
 			</div>
 		</form>
 	
@@ -43,32 +92,19 @@
 	<div th:replace="fragments:: footer"></div>
 </div>
 
-<script type="text/javascript">
+<script>
+	MAX_FILE_SIZE = 502400; // size 500KB
+
 	moduleURL = "[[@{/products}]]";
 	brandURL = "[[@{/brands}]]";
-	dropdownBrand = $("#brand");
-	dropdownCategory = $("#category");
-	$(document).ready(function() {
-		dropdownBrand.change(function() {
-			dropdownCategory.empty();
-			getCategories();
-		})
-		getCategories();
-	});
+	url = "[[@{/products/check_unique}]]";
+	defaultImgThumbnailSrc = "[[@{/images/image-thumbnail.png}]]";
 	
-	function getCategories(){
-		brandId = dropdownBrand.val();
-		url = brandURL + "/" + brandId + "/categories";
-		$.get(url, function(response) {
-			$.each(response, function(idx, category) {
-				$("<option>").val(category.id).text(category.name).appendTo(dropdownCategory);
-							
-			})
-		});		
-	}
 </script>
 
 <script th:src="@{/js/common_form.js}"></script>
-
+<script th:src="@{/js/product_form_overview.js}"></script>
+<script th:src="@{/js/product_form_images.js}"></script>
+<script th:src="@{/js/product_form_details.js}"></script>
 </body>
 </html>

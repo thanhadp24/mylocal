@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments:: page_head(${pageTitle}, 'none')">
+</head>
+<body>
+<div class="container-fluid">
+	<div th:replace="navigation:: header_navbar"></div>
+	
+	<div th:replace="breadcrumb:: content"></div>
+	
+	<div class="row">
+		<div class="col-sm">
+			<div>
+				<img th:src="@{${product.mainImagePath}}" class="img-fluid">
+			</div>
+			<div class="row justify-content-center mt-2">
+				<div>
+					<img th:src="@{${product.mainImagePath}}" height="60px" class="border p-1">
+					<th:block th:each="extra: ${product.images}">
+						<img th:src="@{${extra.extraImage}}" height="60px" class="border p-1">
+					</th:block>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm">
+			<div>
+				<h2>[[${product.name}]]</h2>
+			</div>
+			<div>
+				Brand:
+				<span>[[${product.brand.name}]]</span>
+			</div>
+			<div th:if="${product.discountPercent <= 0}">
+				<span >[[${product.priceWithFormat}]]đ</span>
+			</div>
+			<div th:if="${product.discountPercent > 0}">
+				Price: &nbsp;
+				<span class="text-danger">[[${product.discountPrice}]]đ</span>
+				&nbsp;&nbsp;
+				<del><span>[[${product.priceWithFormat}]]đ</span></del>
+			</div>
+			<div>&nbsp;</div>
+			<div th:utext="${product.shortDescription}"></div>
+		</div>
+		<div class="col-sm-2">
+			<div>
+				<span th:if="${product.inStock}">In Stock</span>
+				<span th:unless="${product.inStock}" class="text-danger">Out of Stock</span>
+			</div>
+			<div class="mt-2">
+				<input type="text" size="5" value="1">
+			</div>
+			<div class="mt-3">
+				<input type="button" value="Add to Cart" class="btn btn-primary">
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-12">
+			<div><hr></div>
+			<div>
+				<h3>Product Description:</h3>
+			</div>
+			<div th:utext="${product.fullDescription}"></div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-12">
+			<div><hr></div>
+			<div>
+				<h3>Product Details:</h3>
+			</div>
+			<th:block th:each="detail: ${product.productDetails}">
+				<b>[[${detail.name}]]</b>
+				<span>[[${detail.value}]]</span>
+				<br>
+			</th:block>
+		</div>
+	</div>
+	
+	<div th:replace="navigation:: footer_navbar"></div>
+</div>
+</body>
+</html>

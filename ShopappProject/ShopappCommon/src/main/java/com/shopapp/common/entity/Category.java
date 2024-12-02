@@ -1,6 +1,5 @@
 package com.shopapp.common.entity;
 
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
@@ -40,7 +40,11 @@ public class Category {
 	private Category parent;
 
 	@OneToMany(mappedBy = "parent")
+	@OrderBy("name asc")
 	private Set<Category> children = new HashSet<>();
+
+	@Column(name = "all_parent_ids", length = 256, nullable = true)
+	private String allParentIds;
 
 	public Category() {
 	}
@@ -48,21 +52,21 @@ public class Category {
 	public Category(Integer id) {
 		this.id = id;
 	}
-	
+
 	public static Category copyIdAndName(Category category) {
 		Category copy = new Category();
 		copy.setId(category.getId());
 		copy.setName(category.getName());
 		return copy;
 	}
-	
+
 	public static Category copyIdAndName(Integer id, String name) {
 		Category copy = new Category();
 		copy.setId(id);
 		copy.setName(name);
 		return copy;
 	}
-	
+
 	public static Category copyFull(Category category) {
 		Category copy = new Category();
 		copy.setId(category.getId());
@@ -71,17 +75,17 @@ public class Category {
 		copy.setImage(category.getImage());
 		copy.setEnabled(category.isEnabled());
 		copy.setHasChildren(category.getChildren().size() > 0);
-		
+
 		return copy;
 	}
-	
+
 	public static Category copyFull(Category category, String name) {
 		Category copy = Category.copyFull(category);
 		copy.setName(name);
-		
+
 		return copy;
 	}
-	
+
 	public Category(Integer id, String name, String alias) {
 		this.id = id;
 		this.name = name;
@@ -154,24 +158,33 @@ public class Category {
 	public void setChildren(Set<Category> children) {
 		this.children = children;
 	}
-	
+
 	@Transient
 	public String getImagePath() {
-		if(id == null) return "/images/image-thumbnail.png";
+		if (id == null)
+			return "/images/image-thumbnail.png";
 		return "/categories-images/" + this.id + "/" + this.getImage();
 	}
-	
+
 	public boolean isHasChildren() {
 		return hasChildren;
 	}
-	
+
 	public void setHasChildren(boolean hasChildren) {
 		this.hasChildren = hasChildren;
 	}
-	
+
+	public String getAllParentIds() {
+		return allParentIds;
+	}
+
+	public void setAllParentIds(String allParentIds) {
+		this.allParentIds = allParentIds;
+	}
+
 	@Transient
 	private boolean hasChildren;
-	
+
 	@Override
 	public String toString() {
 		return this.name;

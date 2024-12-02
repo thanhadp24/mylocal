@@ -1,0 +1,10 @@
+package com.shopapp.service;
+
+import java.util.List;
+
+import com.shopapp.common.entity.Category;
+
+public interface CategoryService {
+	
+	public List<Category> getCategoriesWithNoChildrens();
+}

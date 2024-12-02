@@ -10,6 +10,7 @@ import com.shopapp.common.entity.User;
 
 public class ShopappUserDetails implements UserDetails{
 
+	private static final long serialVersionUID = 1L;
 	private User user;
 	
 	public ShopappUserDetails(User user) {
@@ -65,4 +66,9 @@ public class ShopappUserDetails implements UserDetails{
 	public String getFullname() {
 		return user.getFirstName() + " " + user.getLastName();
 	}
+	
+	public boolean hasRole(String roleName) {
+		return user.hasRole(roleName);
+	}
+	
 }

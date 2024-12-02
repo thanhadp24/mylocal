@@ -51,13 +51,13 @@ public class FileUploadUtil {
 		}
 	}
 
-	public static void removeDir(String categoryDir) {
-		cleanDir(categoryDir);
+	public static void removeDir(String dirPath) {
+		cleanDir(dirPath);
 		try {
-			Files.delete(Paths.get(categoryDir));
+			Files.delete(Paths.get(dirPath));
 		} catch (IOException e) {
 			e.printStackTrace();
-			LOGGER.error("Could not delete dir: " + categoryDir);
+			LOGGER.error("Could not delete dir: " + dirPath);
 		}
 	}
 }	

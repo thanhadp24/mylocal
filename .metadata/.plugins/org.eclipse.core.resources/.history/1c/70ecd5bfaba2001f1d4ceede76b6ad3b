@@ -1,5 +1,0 @@
-package com.shopapp.admin.exception;
-
-public class BrandRestNotFoundException extends Exception {
-
-}

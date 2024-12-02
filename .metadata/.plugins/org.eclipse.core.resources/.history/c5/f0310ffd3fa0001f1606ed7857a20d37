@@ -1,8 +1,0 @@
-package com.shopapp.admin.category;
-
-import org.springframework.boot.test.mock.mockito.MockBeans;
-
-@MockBeans
-public class CategoryServiceTest {
-
-}

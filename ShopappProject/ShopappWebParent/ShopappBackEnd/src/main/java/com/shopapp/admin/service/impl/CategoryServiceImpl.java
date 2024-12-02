@@ -17,10 +17,10 @@ import org.springframework.stereotype.Service;
 
 import com.shopapp.admin.bean.CategoryPageInfo;
 import com.shopapp.admin.common.Common;
-import com.shopapp.admin.exception.CategoryNotFoundException;
 import com.shopapp.admin.repository.CategoryRepository;
 import com.shopapp.admin.service.CategoryService;
 import com.shopapp.common.entity.Category;
+import com.shopapp.common.exception.CategoryNotFoundException;
 
 import jakarta.transaction.Transactional;
 
@@ -109,6 +109,19 @@ public class CategoryServiceImpl implements CategoryService{
 	
 	@Override
 	public Category save(Category category) {
+		Category parent = category.getParent();
+		if(parent != null) {
+			String allParentIds = parent.getAllParentIds() == null ? "-" : parent.getAllParentIds();
+			allParentIds += String.valueOf(parent.getId()) + "-";
+			category.setAllParentIds(allParentIds);
+		}
+		
+		if(category.getAlias().isEmpty() || category.getAlias() == null) {
+			category.setAlias(category.getName().replaceAll(" ", "-"));
+		}else {
+			category.setAlias(category.getAlias().replaceAll(" ", "-"));
+		}
+		
 		return categoryRepository.save(category);
 	}
 	

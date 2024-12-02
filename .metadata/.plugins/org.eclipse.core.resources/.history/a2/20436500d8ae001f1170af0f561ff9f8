@@ -1,0 +1,5 @@
+package com.shopapp.service;
+
+public class CategoryService {
+
+}

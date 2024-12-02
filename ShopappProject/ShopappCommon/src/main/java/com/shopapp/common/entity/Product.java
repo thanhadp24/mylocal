@@ -1,7 +1,14 @@
 package com.shopapp.common.entity;
 
+import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -10,7 +17,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "products")
@@ -18,35 +27,34 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@Column(nullable = false, unique = true, length = 256)
 	private String name;
-	
+
 	@Column(nullable = false, unique = true, length = 256)
 	private String alias;
-	
+
 	@Column(name = "short_description", nullable = false, length = 512)
 	private String shortDescription;
-	
+
 	@Column(name = "full_description", nullable = false, length = 4096)
 	private String fullDescription;
-	
+
 	@Column(name = "created_at")
 	private Date createdAt;
-	
+
 	@Column(name = "updated_at")
 	private Date updatedAt;
-	
+
 	private boolean enabled;
-	
+
 	@Column(name = "in_stock")
 	private boolean inStock;
-	
-	
+
 	private float cost;
-	
+
 	private float price;
-	
+
 	@Column(name = "discount_percent")
 	private float discountPercent;
 
@@ -55,13 +63,46 @@ public class Product {
 	private float height;
 	private float weight;
 
+	@Column(name = "main_image", nullable = false)
+	private String mainImage;
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id", referencedColumnName = "id")
 	private Category category;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "brand_id", referencedColumnName = "id")
 	private Brand brand;
+
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+	private Set<ProductImage> images = new HashSet<>();
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<ProductDetail> productDetails = new ArrayList<>();
+	
+	public List<ProductDetail> getProductDetails() {
+		return productDetails;
+	}
+
+	public void setProductDetails(List<ProductDetail> productDetails) {
+		this.productDetails = productDetails;
+	}
+	
+	public Set<ProductImage> getImages() {
+		return images;
+	}
+
+	public void setImages(Set<ProductImage> images) {
+		this.images = images;
+	}
+
+	public String getMainImage() {
+		return mainImage;
+	}
+
+	public void setMainImage(String mainImage) {
+		this.mainImage = mainImage;
+	}
 
 	public Integer getId() {
 		return id;
@@ -211,6 +252,57 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + "]";
 	}
-
 	
+	public void addExtraImage(String imageName) {
+		this.images.add(new ProductImage(imageName, this));
+	}
+	
+
+	public void addExtraDetail(Integer id, String name, String value) {
+		this.productDetails.add(new ProductDetail(id, name, value, this));
+	}
+	
+	public void addExtraDetail(String name, String value) {
+		this.productDetails.add(new ProductDetail(name, value, this));
+	}
+	
+	@Transient
+	public String getMainImagePath() {
+		if(this.id == null || this.getMainImage() == null) {
+			return "/images/image-thumbnail.png";
+		}
+		return "/product-images/" + this.id + "/" + this.mainImage;
+	}
+
+	public boolean containsImageFileName(String fileName) {
+		return this.images.stream().anyMatch(i -> i.getName().equals(fileName));
+	}
+	
+	@Transient
+	public String getShortName() {
+		if(this.name.length() > 70) {
+			return this.name.substring(0, 70).concat("...");
+		}
+		return this.name;
+	}
+	
+	@Transient
+	public String getPriceWithFormat() {
+		return toCurrencyFormat(this.price);
+	}
+	
+	@Transient
+	public String getDiscountPrice() {
+		if(this.discountPercent > 0) {
+			return toCurrencyFormat(this.price*(1 - this.discountPercent/100));
+		}
+		return toCurrencyFormat(this.price);
+	}
+	
+	private String toCurrencyFormat(float price) {
+		Locale locale = new Locale("vi", "VN");
+		NumberFormat numberFormat = NumberFormat.getInstance(locale);
+		
+		return numberFormat.format(Math.ceil(price));
+	}
 }

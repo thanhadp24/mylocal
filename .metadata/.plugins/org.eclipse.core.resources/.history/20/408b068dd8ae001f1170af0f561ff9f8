@@ -1,0 +1,5 @@
+package com.shopapp.service.impl;
+
+public class CategoryServiceImpl {
+
+}

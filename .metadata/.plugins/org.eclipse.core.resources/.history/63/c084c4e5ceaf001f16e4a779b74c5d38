@@ -1,0 +1,8 @@
+package com.shopapp.common.exception;
+
+public class Snippet {
+	public static void main(String[] args) {
+		categoryRepository.findByAlias(alias);
+	}
+}
+

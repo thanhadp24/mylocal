@@ -1,0 +1,5 @@
+package com.shopapp.repository;
+
+public class CategoryRepository {
+
+}

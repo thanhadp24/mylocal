@@ -17,11 +17,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.shopapp.admin.bean.CategoryPageInfo;
 import com.shopapp.admin.common.Common;
-import com.shopapp.admin.exception.CategoryNotFoundException;
 import com.shopapp.admin.exporter.CategoryCsvExporter;
 import com.shopapp.admin.service.CategoryService;
 import com.shopapp.admin.utils.FileUploadUtil;
 import com.shopapp.common.entity.Category;
+import com.shopapp.common.exception.CategoryNotFoundException;
 
 import jakarta.servlet.http.HttpServletResponse;
 

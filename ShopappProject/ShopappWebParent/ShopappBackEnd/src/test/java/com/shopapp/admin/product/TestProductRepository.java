@@ -28,6 +28,28 @@ public class TestProductRepository {
 	private EntityManager entityManager;
 	
 	@Test
+	public void testExtraDetails() {
+		Product product = productRepository.findById(2).get();
+		
+		product.addExtraDetail("country", "VIET NAM");
+		product.addExtraDetail("MATERIAL", "VIP");
+		
+		productRepository.save(product);
+	}
+	
+	@Test
+	public void testProductWithImages() {
+		Product product = productRepository.findById(2).get();
+		
+		product.setMainImage("test_image.jpg");
+		product.addExtraImage("extra_1.jpg");
+		product.addExtraImage("extra_2.jpg");
+		product.addExtraImage("extra_3.jpg");
+		
+		productRepository.save(product);
+	}
+	
+	@Test
 	public void testCreate() {
 		Brand brand = entityManager.find(Brand.class, 9);
 		Category category = entityManager.find(Category.class, 5);

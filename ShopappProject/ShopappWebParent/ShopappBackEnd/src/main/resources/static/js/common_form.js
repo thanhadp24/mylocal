@@ -4,17 +4,11 @@ $(document).ready(function() {
 	});	
 	
 	$('#fileImage').change(function(){
-		fileSize = this.files[0].size;
-
-		// binary
-		if(fileSize > 102400){
-			this.setCustomValidity("You must choose an image less than 100KB!");
-			// prevent submit to server
-			this.reportValidity();
-		}else {
-			this.setCustomValidity("");
-			showImageThumnail(this);
-		}
+		if(!checkFileSize(this)){
+			return;
+		}			
+		showImageThumnail(this);
+		
 	});
 });	
 
@@ -27,11 +21,25 @@ function showImageThumnail(fileInput){
 	reader.readAsDataURL(file);
 }
 
-function showDialog(title, message){
-		$("#modalTitle").text(title);
-		$("#modalBody").text(message);
-		$("#modalDialog").modal();
+function checkFileSize(fileInput){
+	fileSize = fileInput.files[0].size;
+
+	if(fileSize > MAX_FILE_SIZE){
+		fileInput.setCustomValidity("You must choose an image less than " + MAX_FILE_SIZE + "KB!");
+		// prevent submit to server
+		fileInput.reportValidity();
+		return false;
+	}else {
+		fileInput.setCustomValidity("");
+		return true;
 	}
+}
+
+function showDialog(title, message){
+	$("#modalTitle").text(title);
+	$("#modalBody").text(message);
+	$("#modalDialog").modal();
+}
 	
 function showWarningModal(message){
 	showDialog('Warning', message);

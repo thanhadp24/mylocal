@@ -1,5 +1,0 @@
-package com.shopapp.common.dto;
-
-public class CategoryDto {
-
-}

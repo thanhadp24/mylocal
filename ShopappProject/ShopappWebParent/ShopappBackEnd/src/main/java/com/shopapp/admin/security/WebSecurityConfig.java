@@ -37,7 +37,15 @@ public class WebSecurityConfig {
 		http.authorizeHttpRequests(auth -> auth
 				.requestMatchers("/users/**", "/setting/**").hasAuthority("Admin")
 				.requestMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin","Editor")
-				.requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
+					
+				.requestMatchers("/products/delete/**", "/products/new/**")
+					.hasAnyAuthority("Admin", "Editor")
+				.requestMatchers("/products/edit/**", "/products/save/**", "/products/check_unique")
+					.hasAnyAuthority("Admin", "Editor", "Salesperson")
+				.requestMatchers("/products", "/products/", "/products/detail/**", "/products/page/**")
+					.hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
+				.requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
+				
 				.requestMatchers("/questions/**", "/reviews/**").hasAnyAuthority("Admin", "Assistant")
 				.requestMatchers("/customers/**", "/shipping/**", "/reports/**").hasAnyAuthority("Admin", "Salesperson")
 				.requestMatchers("/orders/**").hasAnyAuthority("Admin", "Salesperson", "Shipper")
@@ -59,7 +67,7 @@ public class WebSecurityConfig {
 
 	@Bean
 	public WebSecurityCustomizer webSecurityCustomizer() {
-		return (web) -> web.ignoring().requestMatchers("/images/**", "/js/**", "/css/**", "/webjars/**");
+		return (web) -> web.ignoring().requestMatchers("/images/**", "/js/**", "/css/**", "/webjars/**", "/richtext/**");
 	}
 
 	@Bean
