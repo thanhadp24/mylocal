@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="col-sm-2" th:fragment="content">
+	<a th:href="@{'/p/' + ${product.alias}}">
+		<div>
+			<img th:src="@{${product.mainImagePath}}" width="100px">
+			<br>
+			<b>[[${product.shortName}]]</b>
+		</div>
+	</a>
+	<div th:if="${product.discountPercent <= 0}">
+		<div th:replace="product/product_fragment:: price(product.discountPrice)"></div>
+	</div>
+	<div th:if="${product.discountPercent > 0}">
+		<div th:replace="product/product_fragment:: price" class="text-danger"></div>
+	</div>
+</div>
+
+<div th:fragment="price(productPrice)" th:remove="tag">
+	<span th:if="${CURRENCY_SYMBOL_POSITION} == 'before price'" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span> 
+	[[${productPrice}]]
+	<span th:if="${CURRENCY_SYMBOL_POSITION} == 'after price'" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>
+</div>
+
+</body>
+</html>

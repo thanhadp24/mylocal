@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Configuration
 public class MvcConfig implements WebMvcConfigurer{
 	
@@ -16,6 +18,7 @@ public class MvcConfig implements WebMvcConfigurer{
 		exposeDirectory("../categories-images", registry);
 		exposeDirectory("../brand-logos", registry);
 		exposeDirectory("../product-images", registry);
+		exposeDirectory("../site-logo", registry);
 	}
 	
 	private void exposeDirectory(String pathPattern, ResourceHandlerRegistry registry) {
@@ -27,4 +30,6 @@ public class MvcConfig implements WebMvcConfigurer{
 		registry.addResourceHandler(logicalPath)
 				.addResourceLocations("file:/" + absPath + "/");
 	}
+	
+	
 }

@@ -1,0 +1,5 @@
+package com.shopapp.utils;
+
+public class MailUtil {
+
+}

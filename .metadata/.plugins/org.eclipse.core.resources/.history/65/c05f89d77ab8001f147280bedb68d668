@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content" th:remove="tag">
+	<form th:action="@{/settings/save_mail_template}" method="post">
+		<ul class="nav nav-tabs" id="mailTemplateTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab"
+				 href="#verification" role="tab">Customer Verification</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab"
+				 href="#orderConfirm" role="tab">Order Confirmation</a>
+			</li>
+		</ul>
+		
+		<div class="tab-content">
+			<div class="tab-pane active p-3" id="general" role="tabpanel">
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">E-mail Subject:</label>
+					<div class="col-sm-9">
+						<input class="form-control" name="CUSTOMER_VERIFY_SUBJECT" th:value="${CUSTOMER_VERIFY_SUBJECT}"
+						placeholder="Please verify your registration to continue your shopping">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">E-mail Content:</label>
+					<div class="col-sm-9">
+						<textarea id="mailToolBar" class="form-control" 
+						 name="CUSTOMER_VERIFY_CONTENT" rows="5"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center m-2 p-2">
+			<input type="submit" value="Save" class="btn btn-primary">
+			<input type="button" value="Cancel" id="btn-cancel"
+				class="btn btn-danger">
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

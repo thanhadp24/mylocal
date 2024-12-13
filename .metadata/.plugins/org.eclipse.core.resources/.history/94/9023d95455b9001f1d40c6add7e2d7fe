@@ -1,0 +1,6 @@
+package com.shopapp.common.bean;
+
+public class EmailSettingBag extends SettingBag{
+
+	
+}

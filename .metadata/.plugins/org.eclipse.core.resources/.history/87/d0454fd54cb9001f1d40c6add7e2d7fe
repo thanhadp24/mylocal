@@ -1,0 +1,32 @@
+package com.shopapp.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shopapp.common.entity.Country;
+import com.shopapp.repository.CountryRepository;
+import com.shopapp.repository.CustomerRepository;
+import com.shopapp.service.CustomerService;
+
+@Service
+public class CustomerServiceImple implements CustomerService {
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@Autowired
+	private CountryRepository countryRepository;
+	
+	@Override
+	public List<Country> getAllCountries() {
+		return countryRepository.findAllByOrderByNameAsc();
+	}
+	
+	@Override
+	public boolean isUniqueEmail(String email) {
+		return customerRepository.findByEmail(email) == null;
+	}
+
+}

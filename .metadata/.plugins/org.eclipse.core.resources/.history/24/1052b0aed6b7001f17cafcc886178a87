@@ -1,0 +1,5 @@
+package com.shopapp.restcontroller;
+
+public class CustomerRestController {
+
+}

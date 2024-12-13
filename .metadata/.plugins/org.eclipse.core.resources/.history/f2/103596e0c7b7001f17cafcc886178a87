@@ -1,0 +1,16 @@
+package com.shopapp.service.impl;
+
+import java.util.List;
+
+import com.shopapp.common.entity.Country;
+import com.shopapp.service.CustomerService;
+
+public class CustomerServiceImple implements CustomerService {
+
+	@Override
+	public List<Country> getAllCountries() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

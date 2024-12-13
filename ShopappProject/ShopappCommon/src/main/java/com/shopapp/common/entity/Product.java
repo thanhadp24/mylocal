@@ -1,11 +1,9 @@
 package com.shopapp.common.entity;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -286,23 +284,13 @@ public class Product {
 		return this.name;
 	}
 	
-	@Transient
-	public String getPriceWithFormat() {
-		return toCurrencyFormat(this.price);
-	}
 	
 	@Transient
-	public String getDiscountPrice() {
+	public float getDiscountPrice() {
 		if(this.discountPercent > 0) {
-			return toCurrencyFormat(this.price*(1 - this.discountPercent/100));
+			return this.price*(1 - this.discountPercent/100);
 		}
-		return toCurrencyFormat(this.price);
+		return this.price;
 	}
 	
-	private String toCurrencyFormat(float price) {
-		Locale locale = new Locale("vi", "VN");
-		NumberFormat numberFormat = NumberFormat.getInstance(locale);
-		
-		return numberFormat.format(Math.ceil(price));
-	}
 }

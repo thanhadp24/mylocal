@@ -34,14 +34,21 @@
 				Brand:
 				<span>[[${product.brand.name}]]</span>
 			</div>
-			<div th:if="${product.discountPercent <= 0}">
-				<span >[[${product.priceWithFormat}]]đ</span>
+			<div>
+				List Price:
+				<span th:if="${product.discountPercent <= 0}">
+					<div th:replace="product/product_fragment:: price(${product.price})"></div>
+				</span>
+				<del th:if="${product.discountPercent > 0}">
+						<div th:replace="product/product_fragment:: price(${product.price})"></div>
+				</del>
 			</div>
 			<div th:if="${product.discountPercent > 0}">
 				Price: &nbsp;
-				<span class="text-danger">[[${product.discountPrice}]]đ</span>
-				&nbsp;&nbsp;
-				<del><span>[[${product.priceWithFormat}]]đ</span></del>
+				<span class="text-danger">
+					<div th:replace="product/product_fragment:: price(${product.discountPrice})"></div>
+				</span>
+				([[${#numbers.formatDecimal(product.discountPercent, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE)}]]%)
 			</div>
 			<div>&nbsp;</div>
 			<div th:utext="${product.shortDescription}"></div>

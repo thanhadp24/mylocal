@@ -1,0 +1,14 @@
+package com.shopapp.common.bean;
+
+import java.util.List;
+
+import com.shopapp.common.entity.Setting;
+
+public class EmailSettingBag extends SettingBag{
+
+	public EmailSettingBag(List<Setting> settings) {
+		super(settings);
+	}
+
+	
+}

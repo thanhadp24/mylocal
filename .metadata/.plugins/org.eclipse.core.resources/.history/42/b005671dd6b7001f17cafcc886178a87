@@ -1,0 +1,10 @@
+package com.shopapp.service;
+
+import java.util.List;
+
+import com.shopapp.common.entity.Country;
+
+public interface CustomerService {
+
+	List<Country> getAllCountries();
+}

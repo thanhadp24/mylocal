@@ -1,0 +1,167 @@
+var btnLoadForStates;
+var dropdownCountryForStates;
+var dropdownStates;
+var btnAddState;
+var btnUpdateState;
+var btnDeleteState;
+var fieldStateName;
+var labelStateName;
+
+$(document).ready(function(){
+	btnLoadForStates = $("#btnLoadForStates");
+	dropdownCountryForStates = $("#dropdownCountryForStates");
+	dropdownStates = $("#dropdownStates");
+	btnAddState = $("#btnAddState");
+	btnUpdateState = $("#btnUpdateState");
+	btnDeleteState = $("#btnDeleteState");
+	fieldStateName = $("#fieldStateName");
+	labelStateName = $("#labelStateName");
+	
+	btnLoadForStates.on('click', function(){
+		loadCountriesForStates();
+	})
+	
+	dropdownCountryForStates.on('change', function(){
+		loadStatesForCountry();
+	})
+	
+
+})
+
+function updateState(){
+	url = contextPath + "states/save";
+	stateName = fieldStateName.val();
+	
+	selectedCountry = $("#dropdownCountryForStates option:selected");
+	countryId = selectedText = selectedCountry.val();
+	countryName = selectedText = selectedCountry.text();
+	
+	jsonData = {name: stateName, country: {id: countryId, name: countryName}}
+	
+	$.ajax({
+		type: 'POST',
+		url: url,
+		beforeSend: function(xhr){
+			xhr.setRequestHeader(csrfHeaderName, csrfValue);
+		},
+		data: JSON.stringify(jsonData),
+		contentType: 'application/json'
+	}).done(function(stateId){
+		selectNewlyAddedState(stateId, stateName);
+		showToastMessage("The new country has been added");
+	}).fail(function(){
+		showToastMessage("ERROR: Server has been encountered error!!!");
+	})
+}
+
+function addState(){
+	url = contextPath + "states/save";
+	stateName = fieldStateName.val();
+	
+	selectedCountry = $("#dropdownCountryForStates option:selected");
+	countryId = selectedText = selectedCountry.val();
+	countryName = selectedText = selectedCountry.text();
+	
+	jsonData = {name: stateName, country: {id: countryId, name: countryName}}
+	
+	$.ajax({
+		type: 'POST',
+		url: url,
+		beforeSend: function(xhr){
+			xhr.setRequestHeader(csrfHeaderName, csrfValue);
+		},
+		data: JSON.stringify(jsonData),
+		contentType: 'application/json'
+	}).done(function(stateId){
+		selectNewlyAddedState(stateId, stateName);
+		showToastMessage("The new country has been added");
+	}).fail(function(){
+		showToastMessage("ERROR: Server has been encountered error!!!");
+	})
+}
+
+function selectNewlyAddedState(stateId, stateName){
+	$("<option>").val(stateId).text(stateName).appendTo(dropdownStates);
+	
+	$("#dropdownStates option[value='" + stateId + "']").prop("selected", true);
+	
+	fieldStateName.val("").focus();
+}
+
+function changeFormStateToNew(){
+	labelStateName.text("State/Province Name:");
+	btnAddState.val("Add")
+	fieldStateName.val("").focus();
+	
+	btnUpdateState.prop('disabled', true)
+	btnDeleteState.prop('disabled', true)
+}
+
+function changeFormStateToSelectedState(){
+	btnAddState.prop('value', 'New')
+	btnUpdateState.prop('disabled', false)
+	btnDeleteState.prop('disabled', false)
+	
+	labelStateName.text("Selected State:");
+	selectedText = $("#dropdownStates option:selected").text();
+	fieldStateName.val(selectedText);
+}
+
+function updateState(){
+	url = contextPath + "countries/save";
+	countryName = fie.val();
+	countryCode = fieldCountryCode.val();
+	
+	countryId = dropdownCountry.val().split("-")[0];
+	
+	jsonData = {id: countryId, name: countryName, code: countryCode}
+	
+	$.ajax({
+		type: 'POST',
+		url: url,
+		beforeSend: function(xhr){
+			xhr.setRequestHeader(csrfHeaderName, csrfValue);
+		},
+		data: JSON.stringify(jsonData),
+		contentType: 'application/json'
+	}).done(function(countryId){
+		$("#dropdownCountry option:selected").val(countryId + "-" + countryCode);
+		$("#dropdownCountry option:selected").text(countryName);
+		showToastMessage("The new country has been updated");
+		
+		changeFormStateToNew();
+	}).fail(function(){
+		showToastMessage("ERROR: Server has been encountered error!!!");
+	})
+}
+
+function loadCountriesForStates(){
+	url = contextPath + "countries/list";
+	$.get(url, function(responseJson){
+		dropdownCountryForStates.empty();
+		$.each(responseJson, function(idx, country){
+			$("<option>").val(country.id).text(country.name).appendTo(dropdownCountryForStates);
+		})
+	}).done(function(){
+		btnLoadForStates.val("Refresh Coutry List");
+		showToastMessage("All coutries have been loaded");
+	}).fail(function(){
+		showToastMessage("ERROR: Server has been encountered error!!!");
+	})
+}
+
+function loadStatesForCountry(){
+	countryId = $("#dropdownCountryForStates option:selected").val();
+	url = contextPath + "states/countries/" + countryId;
+	$.get(url, function(responseJson){
+		dropdownStates.empty();
+		$.each(responseJson, function(idx, state){
+			$("<option>").val(state.id).text(state.name).appendTo(dropdownStates);
+		})
+	}).done(function(){
+		btnLoad.val("Refresh Coutry List");
+		showToastMessage("All coutries have been loaded");
+	}).fail(function(){
+		showToastMessage("ERROR: Server has been encountered error!!!");
+	})
+}
