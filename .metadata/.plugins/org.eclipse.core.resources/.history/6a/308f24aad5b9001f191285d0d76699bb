@@ -1,0 +1,5 @@
+package com.shopapp.admin.controller;
+
+public class CustomerController {
+
+}

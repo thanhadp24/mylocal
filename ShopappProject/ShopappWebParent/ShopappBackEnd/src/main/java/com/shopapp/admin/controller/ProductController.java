@@ -10,7 +10,6 @@ import static com.shopapp.admin.helper.ProductSaveHelper.setSaveDetails;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.shopapp.admin.common.Common;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
+import com.shopapp.admin.paging.PagingAndSortingParam;
 import com.shopapp.admin.security.ShopappUserDetails;
 import com.shopapp.admin.service.BrandService;
 import com.shopapp.admin.service.CategoryService;
@@ -44,48 +44,24 @@ public class ProductController {
 	private CategoryService categoryService;
 	
 	@GetMapping("/products")
-	public String viewProducts(Model model) {
-		return viewProductPerPage("asc", "name", 1, null, 0, model);
+	public String viewProducts() {
+		return "redirect:/products/page/1?sortDir=asc&sortField=name&categoryId=0";
 	}
 	
 	@GetMapping("/products/page/{pageNum}")
-	public String viewProductPerPage(@Param("sortDir") String sortDir,
-			@Param("sortField") String sortField,
+	public String viewProductPerPage(
+			@PagingAndSortingParam(listName = "products", moduleURL = "/products") PagingAndSortingHelper helper,
 			@PathVariable("pageNum") int pageNum, 
-			@Param("keyword") String keyword, 
 			@Param("categoryId") Integer categoryId, 
 			Model model) {
 		
-		if (sortDir == null || sortDir.isEmpty()) {
-			sortDir = "asc";
-		}
+		productService.getByPage(pageNum, helper, categoryId);
 
-		Page<Product> productPages = productService.getByPage(pageNum, sortDir, sortField, keyword, categoryId);
-
-		String reverseSortDir = (sortDir.equals("asc") ? "desc" : "asc");
-		long startCount = (pageNum - 1) * Common.PRODUCTS_PER_PAGE + 1;
-		long endCount = startCount + Common.PRODUCTS_PER_PAGE - 1;
-		
-		if(endCount > productPages.getTotalElements()) {
-			endCount = productPages.getTotalElements();
-		}
-		
-		model.addAttribute("categories", categoryService.getCategoryUsedInForm());
-		
 		if(categoryId != null) {
 			model.addAttribute("categoryId", categoryId);
 		}
-		
-		model.addAttribute("currentPage", pageNum);
-		model.addAttribute("totalPages", productPages.getTotalPages());
-		model.addAttribute("totalItems", productPages.getTotalElements());
-		model.addAttribute("products", productPages.getContent());
-		model.addAttribute("sortField", sortField);
-		model.addAttribute("sortDir", sortDir);
-		model.addAttribute("reverseSortDir", reverseSortDir);
-		model.addAttribute("keyword", keyword);
-		model.addAttribute("startCount", startCount);
-		model.addAttribute("endCount", endCount);
+
+		model.addAttribute("categories", categoryService.getCategoryUsedInForm());
 
 		return "products/products";
 	}
@@ -118,11 +94,12 @@ public class ProductController {
 			@AuthenticationPrincipal ShopappUserDetails loggedUser,
 			RedirectAttributes ra) throws IOException {
 		
-		if(loggedUser.hasRole("Salesperson")) {
-			productService.saveProductPrice(product);
-			ra.addFlashAttribute("message", "The product has been save successfully");
-			
-			return "redirect:/products";
+		if(!loggedUser.hasRole("Admin") && !loggedUser.hasRole("Editor")) {
+			if(loggedUser.hasRole("Salesperson")) {
+				productService.saveProductPrice(product);
+				ra.addFlashAttribute("message", "The product has been save successfully");
+				return "redirect:/products";
+			}
 		}
 		
 		setMainImage(mainImgMultipart, product);

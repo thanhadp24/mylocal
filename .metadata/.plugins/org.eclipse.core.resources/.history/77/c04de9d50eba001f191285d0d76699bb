@@ -1,0 +1,32 @@
+package com.shopapp.admin.helper;
+
+import com.shopapp.admin.common.Common;
+
+public class PagingAndSortingHelper {
+
+	public PagingAndSortingHelper() {
+	}
+	
+	public void updateModel() {
+
+		long totalItems = usersPage.getTotalElements();
+		
+		long startCount = (pageNum - 1) * Common.USERS_PER_PAGE + 1;
+		long endCount = startCount + Common.USERS_PER_PAGE - 1;
+		
+		if(endCount > totalItems) {
+			endCount = totalItems;
+		}
+		
+		
+		model.addAttribute("startCount", startCount);
+		model.addAttribute("endCount", endCount);
+		model.addAttribute("currentPage", pageNum);
+		
+		model.addAttribute("users", usersPage.getContent());
+		model.addAttribute("totalPages", usersPage.getTotalPages());
+		model.addAttribute("totalItems", totalItems);
+		
+		model.addAttribute("moduleURL", "/users");
+	}
+}

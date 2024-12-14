@@ -1,0 +1,60 @@
+package com.shopapp.admin.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.shopapp.admin.common.Common;
+import com.shopapp.admin.service.CustomerService;
+import com.shopapp.common.entity.Brand;
+import com.shopapp.common.entity.Customer;
+
+@Controller
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	@GetMapping("/customers")
+	public String viewFirtPage(Model model) {
+		return viewByPage(1, "asc", "firstName", null, model);
+	}
+	
+	@GetMapping("/customers/page/{pageNum}")
+	public String viewByPage(@PathVariable("pageNum") int pageNum,
+				@Param("sortDir") String sortDir,
+				@Param("sortField") String sortField,
+				@Param("keyword") String keyword,
+				Model model) {
+		
+		if (sortDir == null || sortDir.isEmpty()) {
+			sortDir = "asc";
+		}
+
+		Page<Customer> customerPages = customerService.getByPage(pageNum, keyword, sortDir, sortField);
+
+		String reverseSortDir = (sortDir.equals("asc") ? "desc" : "asc");
+		long startCount = (pageNum - 1) * Common.BRANDS_PER_PAGE + 1;
+		long endCount = startCount + Common.BRANDS_PER_PAGE - 1;
+		
+		if(endCount > customerPages.getTotalElements()) {
+			endCount = customerPages.getTotalElements();
+		}
+		
+		model.addAttribute("currentPage", pageNum);
+		model.addAttribute("totalPages", customerPages.getTotalPages());
+		model.addAttribute("totalItems", customerPages.getTotalElements());
+		model.addAttribute("brands", customerPages.getContent());
+		model.addAttribute("sortField", sortField);
+		model.addAttribute("reverseSortDir", reverseSortDir);
+		model.addAttribute("keyword", keyword);
+		model.addAttribute("startCount", startCount);
+		model.addAttribute("endCount", endCount);
+		
+		return "customers/customers";
+	}
+}

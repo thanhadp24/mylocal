@@ -1,0 +1,34 @@
+package com.shopapp.admin.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.shopapp.admin.service.CustomerService;
+
+@Controller
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	@GetMapping("/customers")
+	public String viewFirtPage() {
+		return null;
+	}
+	
+	@GetMapping("/customers/page/{pageNum}")
+	public String viewByPage(@PathVariable("pageNum") Integer pageNum,
+				@Param("sortDir") String sortDir,
+				@Param("sortField") String sortField,
+				@Param("keyword") String keyword,
+				Model model) {
+		
+		
+		
+		return "customers/customers";
+	}
+}

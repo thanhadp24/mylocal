@@ -50,12 +50,12 @@ public class Customer {
 	@Column(name = "postal_code", length = 10, nullable = false)
 	private String postalCode;
 
-	@Column(name = "created_at", nullable = false)
+	@Column(name = "created_at")
 	private Date createdAt;
 
 	private boolean enabled;
 
-	@Column(name = "verification_code", length = 64, nullable = true)
+	@Column(name = "verification_code", length = 64)
 	private String verificationCode;
 
 	@ManyToOne(fetch = FetchType.LAZY)

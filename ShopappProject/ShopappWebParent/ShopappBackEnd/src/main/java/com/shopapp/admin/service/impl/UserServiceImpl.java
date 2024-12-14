@@ -4,9 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -14,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.shopapp.admin.common.Common;
 import com.shopapp.admin.exception.UserNotFoundException;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.admin.repository.UserRepository;
 import com.shopapp.admin.service.UserService;
 import com.shopapp.common.entity.User;
@@ -30,7 +29,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public List<User> getAll() {
-		return userRepository.findAll(Sort.by("firstName").ascending());
+		return (List<User>) userRepository.findAll(Sort.by("firstName").ascending());
 	}
 	
 	@Override
@@ -39,16 +38,8 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public Page<User> getByPage(int pageNum, String sortField, String sortDir, String keyword) {
-		Sort sort = Sort.by(sortField);
-		sort = sortDir.equals("asc") ? sort.ascending(): sort.descending();
-		
-		Pageable pageable = PageRequest.of(pageNum - 1, Common.USERS_PER_PAGE, sort);
-		
-		if (keyword != null) {
-			return userRepository.findAll(keyword, pageable);
-		}
-		return userRepository.findAll(pageable);
+	public void getByPage(int pageNum, PagingAndSortingHelper helper) {
+		helper.listEntities(pageNum, Common.USERS_PER_PAGE, userRepository);
 	}
 	
 	@Override

@@ -49,15 +49,15 @@
 				<thead>
 					<tr>
 						<th class="hidable-column">
-							<th th:replace="fragments:: column_link('/products', 'id', 'ID', 'tag')"></th>
+							<th th:replace="fragments:: column_link('id', 'ID', 'tag')"></th>
 						</th>
 						<th class="text-center">Main Image</th>
-						<th th:replace="fragments:: column_link('/products', 'name', 'Product Name', 'none')"></th>
+						<th th:replace="fragments:: column_link('name', 'Product Name', 'none')"></th>
 						<th class="hidable-column">
-							<th th:replace="fragments:: column_link('/products', 'brand', 'Brand', 'tag')"></th>
+							<th th:replace="fragments:: column_link('brand', 'Brand', 'tag')"></th>
 						</th>
 						<th class="hidable-column">
-							<th th:replace="fragments:: column_link('/products', 'category', 'Category', 'tag')"></th>
+							<th th:replace="fragments:: column_link('category', 'Category', 'tag')"></th>
 						</th>
 						<th:block sec:authorize="hasAnyAuthority('Admin','Editor')">
 							<th>Enabled</th>
@@ -126,7 +126,7 @@
 			</div>
 		</div>
 
-		<div th:replace="fragments:: pagination('/products', 'products')"></div>
+		<div th:replace="fragments:: pagination('products')"></div>
 
 		<div th:replace="modal_fragments:: modal_confirm"></div>
 		

@@ -1,0 +1,26 @@
+package com.shopapp.admin.repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.shopapp.common.entity.Customer;
+
+
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, Integer>{
+	
+	Page<Customer> findAll(Pageable pageable);
+	
+	@Query("SELECT c Customer c WHERE c.email = :email")
+	Customer findByEmail(String email);
+	
+	long countById(Integer id);
+	
+	@Query("UPDATE c Customer c SET c.enabled = true WHERE c.id = :id")
+	@Modifying
+	void updateEnableStatus(Integer id);
+}

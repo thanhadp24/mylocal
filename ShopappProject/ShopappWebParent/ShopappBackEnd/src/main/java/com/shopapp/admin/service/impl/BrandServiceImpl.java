@@ -4,15 +4,12 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shopapp.admin.common.Common;
 import com.shopapp.admin.exception.BrandNotFoundException;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.admin.repository.BrandRepository;
 import com.shopapp.admin.service.BrandService;
 import com.shopapp.common.entity.Brand;
@@ -30,16 +27,8 @@ public class BrandServiceImpl implements BrandService {
 	}
 	
 	@Override
-	public Page<Brand> getByPage(int pageNum, String sortField, String sortDir, String keyword) {
-		Sort sort = Sort.by(sortField);
-		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
-		
-		Pageable pageable = PageRequest.of(pageNum - 1, Common.BRANDS_PER_PAGE, sort);
-		
-		if(keyword == null) {
-			return brandRepository.findAll(pageable);
-		}
-		return brandRepository.findAll(keyword, pageable);
+	public void getByPage(int pageNum, PagingAndSortingHelper helper) {
+		helper.listEntities(pageNum, Common.BRANDS_PER_PAGE, brandRepository);
 	}
 	
 	@Override

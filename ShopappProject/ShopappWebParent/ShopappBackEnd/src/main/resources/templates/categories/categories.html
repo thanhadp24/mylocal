@@ -13,7 +13,7 @@
 			<a th:href="@{/categories/export/csv}" class="fa-solid fa-file-csv fa-lg icon-gray"></a>
 		</div>
 	
-		<div th:replace="fragments:: search('/categories')"></div>
+		<div th:replace="fragments:: search"></div>
 		
 		<div th:replace="fragments:: message"></div>
 		
@@ -23,7 +23,7 @@
 					<tr>
 						<th class="text-center">ID</th>
 						<th>Category Image</th>
-						<th th:replace="fragments:: column_link('/categories', 'name', 'Category Name', 'none')"></th>
+						<th th:replace="fragments:: column_link('name', 'Category Name', 'none')"></th>
 						<th class="hidable-column">Alias</th>
 						<th>Enabled</th>
 						<th>Action</th>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		
-		<div th:replace="fragments:: pagination('/categories', 'categories')"></div>
+		<div th:replace="fragments:: pagination('categories')"></div>
  
 		<div th:replace="modal_fragments:: modal_confirm"></div>
 

@@ -1,12 +1,11 @@
 package com.shopapp.admin.service;
 
-import org.springframework.data.domain.Page;
-
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.common.entity.Product;
 import com.shopapp.common.exception.ProductNotFoundException;
 
 public interface ProductService {
-	Page<Product> getByPage(int numPage, String sortDir, String sortField, String keyword, Integer categoryId);
+	void getByPage(int pageNum, PagingAndSortingHelper helper, Integer categoryId);
 
 	Product get(Integer id) throws ProductNotFoundException;
 

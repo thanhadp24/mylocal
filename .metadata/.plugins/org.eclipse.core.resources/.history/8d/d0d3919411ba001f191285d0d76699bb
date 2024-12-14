@@ -1,0 +1,41 @@
+package com.shopapp.admin.helper;
+
+import org.springframework.data.domain.Page;
+import org.springframework.web.method.support.ModelAndViewContainer;
+
+public class PagingAndSortingHelper {
+
+	private ModelAndViewContainer model;
+	private String moduleURL;
+	private String listName;
+	
+	public PagingAndSortingHelper(ModelAndViewContainer model, String moduleURL, String listName) {
+		this.model = model;
+		this.moduleURL = moduleURL;
+		this.listName = listName;
+	}
+	
+	public void updateModel(int pageNum, Page<?> page) {
+
+		long totalItems = page.getTotalElements();
+		int pageSize = page.getSize();
+		
+		long startCount = (pageNum - 1) * pageSize + 1;
+		long endCount = startCount + pageSize - 1;
+		
+		if(endCount > totalItems) {
+			endCount = totalItems;
+		}
+		
+		
+		model.addAttribute("startCount", startCount);
+		model.addAttribute("endCount", endCount);
+		model.addAttribute("currentPage", pageNum);
+		
+		model.addAttribute("totalPages", page.getTotalPages());
+		model.addAttribute("totalItems", totalItems);
+		
+		model.addAttribute(listName, page.getContent());
+		model.addAttribute("moduleURL", moduleURL);
+	}
+}

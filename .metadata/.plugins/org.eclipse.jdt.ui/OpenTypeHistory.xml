@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=ShopappCommon/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopapp.common.entity{Setting.java[Setting" modifiers="1" timestamp="1733489080258"/>
-    <typeInfo handle="=ShopappFrontEnd/C:\/Users\/ASUS\/.m2\/repository\/org\/apache\/tomcat\/embed\/tomcat-embed-core\/10.1.31\/tomcat-embed-core-10.1.31.jar=/maven.pomderived=/true=/=/maven.groupId=/org.apache.tomcat.embed=/=/maven.artifactId=/tomcat-embed-core=/=/maven.version=/10.1.31=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;jakarta.servlet(Filter.class[Filter" modifiers="1537" timestamp="1730469127705"/>
-    <typeInfo handle="=ShopappFrontEnd/C:\/Users\/ASUS\/.m2\/repository\/com\/fasterxml\/classmate\/1.7.0\/classmate-1.7.0.jar=/maven.pomderived=/true=/=/test=/true=/=/javadoc_location=/jar:file:\/C:\/Users\/ASUS\/.m2\/repository\/com\/fasterxml\/classmate\/1.7.0\/classmate-1.7.0-javadoc.jar\!\/=/=/maven.groupId=/com.fasterxml=/=/maven.artifactId=/classmate=/=/maven.version=/1.7.0=/=/maven.scope=/runtime=/=/maven.pomderived=/true=/&lt;com.fasterxml.classmate(Filter.class[Filter" modifiers="1537" timestamp="1704244389000"/>
-    <typeInfo handle="=ShopappFrontEnd/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopapp.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1733931571599"/>
+    <typeInfo handle="=ShopappCommon/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopapp.common.entity{Setting.java[Setting" modifiers="1" timestamp="1734102515682"/>
+    <typeInfo handle="=ShopappFrontEnd/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopapp.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1734104508775"/>
+    <typeInfo handle="=ShopappCommon/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopapp.common.bean{SettingBag.java[SettingBag" modifiers="1" timestamp="1734102587377"/>
 </typeInfoHistroy>

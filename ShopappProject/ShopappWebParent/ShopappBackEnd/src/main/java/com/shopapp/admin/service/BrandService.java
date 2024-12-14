@@ -2,16 +2,15 @@ package com.shopapp.admin.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-
 import com.shopapp.admin.exception.BrandNotFoundException;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.common.entity.Brand;
 
 public interface BrandService {
 	
 	List<Brand> getAll();
 	
-	Page<Brand> getByPage(int pageNum, String sortField, String sortDir, String keyword);
+	void getByPage(int pageNum, PagingAndSortingHelper helper);
 	
 	Brand save(Brand brand);
 	

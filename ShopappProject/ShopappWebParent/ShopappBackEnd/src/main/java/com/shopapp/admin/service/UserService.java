@@ -2,9 +2,8 @@ package com.shopapp.admin.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-
 import com.shopapp.admin.exception.UserNotFoundException;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.common.entity.User;
 
 public interface UserService{
@@ -14,7 +13,7 @@ public interface UserService{
 	
 	User get(int id) throws UserNotFoundException;
 	
-	Page<User> getByPage(int pageNum, String sortField, String sortDir, String keyword);
+	void getByPage(int pageNum, PagingAndSortingHelper helper);
 	
 	int countTotalPages();
 

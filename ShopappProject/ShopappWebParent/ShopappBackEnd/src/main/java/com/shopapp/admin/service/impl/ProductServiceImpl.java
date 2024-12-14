@@ -5,13 +5,12 @@ import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shopapp.admin.common.Common;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
 import com.shopapp.admin.repository.ProductRepository;
 import com.shopapp.admin.service.ProductService;
 import com.shopapp.common.entity.Product;
@@ -24,29 +23,30 @@ public class ProductServiceImpl implements ProductService{
 	private ProductRepository productRepository;
 	
 	@Override
-	public Page<Product> getByPage(int numPage, String sortDir, String sortField, 
-			String keyword, Integer categoryId) {
-		Sort sort = Sort.by(sortField);
+	public void getByPage(int pageNum, PagingAndSortingHelper helper ,Integer categoryId) {
 		
-		sort = sortDir.equals("asc") ? sort.ascending(): sort.descending();
+		Pageable pageable = helper.createPagable(Common.PRODUCTS_PER_PAGE, pageNum);
+		Page<Product> page = null;
 		
-		Pageable pageable = PageRequest.of(numPage - 1, Common.PRODUCTS_PER_PAGE, sort);
+		String keyword = helper.getKeyword();
 		
 		if(keyword != null && !keyword.isEmpty()) {
 			if(categoryId != null && categoryId > 0) {
 				String categoryMatch = "-" + String.valueOf(categoryId) + "-";
-				return productRepository.searchInCategory(categoryId, categoryMatch, keyword, pageable);
+				page = productRepository.searchInCategory(categoryId, categoryMatch, keyword, pageable);
 			}
 			
-			return productRepository.findAll(keyword, pageable);
+			page = productRepository.findAll(keyword, pageable);
 		}
 		
 		if(categoryId != null && categoryId > 0) {
 			String categoryMatch = "-" + String.valueOf(categoryId) + "-";
-			return productRepository.findAllInCategory(categoryId, categoryMatch, pageable);
+			page = productRepository.findAllInCategory(categoryId, categoryMatch, pageable);
+		}else {
+			page = productRepository.findAll(pageable);
 		}
 		
-		return productRepository.findAll(pageable);
+		helper.updateModel(pageNum, page);
 	}
 	
 	@Override

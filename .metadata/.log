@@ -5485,3 +5485,1186 @@ java.lang.IllegalStateException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+!SESSION 2024-12-14 09:59:16.598 -----------------------------------------------
+eclipse.buildId=4.33.0.202410162246
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 10:00:43.039
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 10:00:49.962
+!MESSAGE Logback config file: C:\Users\ASUS\OneDrive\Máy tính\e-commerce project\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 10:00:51.274
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 10:00:51.274
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 10:00:52.157
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 10:00:52.157
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-14 10:01:10.680
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ASUS'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.646
+!MESSAGE Boot project ADDED: ShopappBackEnd
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.647
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.667
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.770
+!MESSAGE Boot project ADDED: ShopappCommon
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.772
+!MESSAGE Boot project ADDED: ShopappFrontEnd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 10:01:12.858
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+D:\dowload\sts 4.26\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/ASUS/OneDrive/Máy tính/e-commerce project/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1734145272856
+-Dlanguageserver.hover-timeout=225
+-jar
+D:\dowload\sts 4.26\plugins\org.springframework.tooling.boot.ls_1.58.0.202410160331\servers\spring-boot-language-server\spring-boot-language-server-1.58.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:01:12.859
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 10:01:18.558
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 8136
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 10:01:19.185
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 10:01:19.311
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 10:01:19.354
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 10:01:19.609
+!MESSAGE [Info]	No ES Library found for file: file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/resources/static/js/states_setting.js
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:25:35.806
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:27:59.557
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:28:01.419
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:28.451
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:30.639
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:34.177
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:34.184
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:38.736
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:38.743
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:42.657
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:42.667
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:47.957
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:47.962
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:49.151
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:49.156
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:50.766
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:50.771
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:53.489
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:29:53.493
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:01.177
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:01.182
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:04.188
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:06.532
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:10.028
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:10.776
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 10:30:12.286
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/repository/CustomerRepository.java
+!SESSION 2024-12-14 10:50:08.437 -----------------------------------------------
+eclipse.buildId=4.33.0.202410162246
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 10:50:10.740
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 10:50:12.308
+!MESSAGE Logback config file: C:\Users\ASUS\OneDrive\Máy tính\e-commerce project\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 10:50:12.703
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 10:50:12.703
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 10:50:13.003
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 10:50:13.003
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 10:50:17.475
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+D:\dowload\sts 4.26\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/ASUS/OneDrive/Máy tính/e-commerce project/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1734148217473
+-Dlanguageserver.hover-timeout=225
+-jar
+D:\dowload\sts 4.26\plugins\org.springframework.tooling.boot.ls_1.58.0.202410160331\servers\spring-boot-language-server\spring-boot-language-server-1.58.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:17.476
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 10:50:17.488
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 24880
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:19.420
+!MESSAGE Boot project ADDED: ShopappBackEnd
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:19.423
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:19.427
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:19.430
+!MESSAGE Boot project ADDED: ShopappCommon
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 10:50:19.442
+!MESSAGE Boot project ADDED: ShopappFrontEnd
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-14 10:50:19.714
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ASUS'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-14 11:06:38.533 -----------------------------------------------
+eclipse.buildId=4.33.0.202410162246
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 11:06:41.042
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 11:06:42.303
+!MESSAGE Logback config file: C:\Users\ASUS\OneDrive\Máy tính\e-commerce project\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 11:06:42.684
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 11:06:42.684
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-12-14 11:06:42.970
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-14 11:06:42.970
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 11:06:46.415
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+D:\dowload\sts 4.26\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/ASUS/OneDrive/Máy tính/e-commerce project/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1734149206414
+-Dlanguageserver.hover-timeout=225
+-jar
+D:\dowload\sts 4.26\plugins\org.springframework.tooling.boot.ls_1.58.0.202410160331\servers\spring-boot-language-server\spring-boot-language-server-1.58.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:46.416
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-12-14 11:06:46.438
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 16044
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:47.998
+!MESSAGE Boot project ADDED: ShopappBackEnd
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:48.002
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:48.005
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:48.006
+!MESSAGE Boot project ADDED: ShopappCommon
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-12-14 11:06:48.008
+!MESSAGE Boot project ADDED: ShopappFrontEnd
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-14 11:06:48.210
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ASUS'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 11:12:25.428
+!MESSAGE Unable to compute end of document
+!STACK 0
+org.eclipse.jface.text.BadLocationException: 2393
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1112)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:246)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:863)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toPosition(LSPEclipseUtils.java:195)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:44)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:80)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.lambda$2(CodeMiningManager.java:190)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.getCodeMinings(CodeMiningManager.java:196)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.updateCodeMinings(CodeMiningManager.java:141)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.run(CodeMiningManager.java:130)
+	at org.eclipse.jface.text.source.SourceViewer.updateCodeMinings(SourceViewer.java:1333)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaCodeMiningReconciler.reconciled(JavaCodeMiningReconciler.java:51)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1685)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 12:21:23.964
+!MESSAGE InterruptedException
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResolution(LSPCodeActionMarkerResolution.java:159)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.getResolutions(LSPCodeActionMarkerResolution.java:105)
+	at org.springframework.tooling.boot.ls.markers.LSPBootCodeActionMarkerResolution.getResolutions(LSPBootCodeActionMarkerResolution.java:25)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.getResolutions(MarkerHelpRegistry.java:393)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectMarkerProposals(JavaCorrectionProcessor.java:318)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectProposals(JavaCorrectionProcessor.java:277)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getMarkerAnnotationFixes(ProblemHover.java:154)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 12:22:24.856
+!MESSAGE InterruptedException
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResolution(LSPCodeActionMarkerResolution.java:159)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.getResolutions(LSPCodeActionMarkerResolution.java:105)
+	at org.springframework.tooling.boot.ls.markers.LSPBootCodeActionMarkerResolution.getResolutions(LSPBootCodeActionMarkerResolution.java:25)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.getResolutions(MarkerHelpRegistry.java:393)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectMarkerProposals(JavaCorrectionProcessor.java:318)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectProposals(JavaCorrectionProcessor.java:277)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getMarkerAnnotationFixes(ProblemHover.java:154)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2024-12-14 13:05:57.165
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2202)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeStructuredDocumentRegion(XMLModelParser.java:548)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeData(XMLModelParser.java:238)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeRegion(XMLModelParser.java:321)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.regionChanged(DOMModelImpl.java:801)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:546)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1184)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1968)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2426)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2411)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:143)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:146)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2371)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:108)
+	at org.eclipse.jface.text.TextViewer.shiftLeft(TextViewer.java:4466)
+	at org.eclipse.jface.text.TextViewer.shift(TextViewer.java:4350)
+	at org.eclipse.jface.text.TextViewer.doOperation(TextViewer.java:3970)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:1084)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1468)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doModelOperation(StructuredTextViewer.java:659)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:522)
+	at org.eclipse.ui.texteditor.ShiftAction.lambda$0(ShiftAction.java:87)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.texteditor.ShiftAction.run(ShiftAction.java:87)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ActivationCodeTrigger.verifyKey(AbstractTextEditor.java:794)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:482)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:853)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5740)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5424)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1225)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1221)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1704)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4849)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:347)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4727)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:06:27.821
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:06:27.910
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:06:27.913
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:06:28.421
+!MESSAGE [Info]	No ES Library found for file: file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/resources/static/js/common_link.js
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:06:32.393
+!MESSAGE [Info]	No ES Library found for file: file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/resources/static/js/common_form.js
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:08:42.394
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:08:42.453
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:08:42.458
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 14:08:43.355
+!MESSAGE [Info]	No ES Library found for file: file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/resources/static/js/common_link.js
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 16:51:42.849
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:13:21.182
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:13:21.456
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:13:21.461
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:13:21.467
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:13:42.414
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:13:48.819
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:21:08.246
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:21:08.405
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 17:21:08.410
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:21:08.415
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CustomerController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:21:13.046
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CustomerController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:21:16.408
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CustomerController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:21:18.067
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CustomerController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 17:21:21.489
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CustomerController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:07:40.271
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:12:47.453
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:12:48.169
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:12:48.236
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:12:48.360
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:12:48.603
+!MESSAGE Could not get code actions due to timeout after 300 milliseconds in `textDocument/codeAction`
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResolution(LSPCodeActionMarkerResolution.java:159)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:210)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:263)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:148)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:138)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.canFix(JavaCorrectionProcessor.java:525)
+	at org.eclipse.jface.text.quickassist.QuickAssistAssistant.canFix(QuickAssistAssistant.java:130)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.hasQuickFix(DefaultMarkerAnnotationAccess.java:435)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.getImage(DefaultMarkerAnnotationAccess.java:390)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.paint(DefaultMarkerAnnotationAccess.java:266)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:795)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:530)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.lambda$1(AnnotationRulerColumn.java:260)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1636)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4784)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:12:54.023
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:12:59.507
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:03.368
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:05.451
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:16.790
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:22.451
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:23.557
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:13:27.930
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:17:32.923
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:28.477
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:28.634
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:28.638
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:28.642
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:30.044
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:32.642
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:54.813
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:55.838
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:59.659
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:59.800
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:19:59.802
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:19:59.806
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:20:11.815
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:23:38.001
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:23:38.171
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:23:38.177
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:38.181
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:39.675
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:42.091
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:44.618
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:46.081
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:48.139
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:48.828
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:23:55.192
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:00.131
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:01.226
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:02.298
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:03.830
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:05.393
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:06.667
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:08.330
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:09.538
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:12.830
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:14.230
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:15.238
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:16.375
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:16.953
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:18.732
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:20.640
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:24:25.037
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:28:24.521
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:30:45.523
+!MESSAGE Unable to compute end of document
+!STACK 0
+org.eclipse.jface.text.BadLocationException: 966
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1112)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:246)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:863)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toPosition(LSPEclipseUtils.java:195)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:44)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:80)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.lambda$2(CodeMiningManager.java:190)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.getCodeMinings(CodeMiningManager.java:196)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.updateCodeMinings(CodeMiningManager.java:141)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.run(CodeMiningManager.java:130)
+	at org.eclipse.jface.text.source.SourceViewer.updateCodeMinings(SourceViewer.java:1333)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaCodeMiningReconciler.reconciled(JavaCodeMiningReconciler.java:51)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1685)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 18:34:46.094
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:37:55.184
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:37:55.374
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 18:37:55.377
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:37:55.383
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:38:14.242
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:38:18.132
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:38:31.185
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 18:38:32.466
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/UserController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:32:00.249
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:32:00.416
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:32:00.420
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:00.427
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:09.192
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:11.066
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:12.274
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:15.115
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:17.916
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:18.863
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:20.073
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:20.654
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:22.992
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:24.162
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:25.856
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:27.705
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:31.693
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:33.973
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:38.458
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:32:50.075
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:20.630
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:23.483
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:31.619
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:42.704
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:43.425
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:44.582
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:46.486
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:49.936
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:33:51.341
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:02.405
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:10.042
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/BrandController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:32.262
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:36:40.068
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:36:40.228
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 19:36:40.232
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:40.234
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:42.097
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:42.929
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:48.521
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:49.268
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:52.451
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:54.732
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:56.102
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:56.745
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:36:58.003
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:37:01.088
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:37:01.784
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:37:03.839
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:37:05.118
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:39:46.565
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 19:49:19.629
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/CategoryController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 19:49:20.797
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 20:05:53.164
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 20:29:44.064
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 20:30:15.693
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:35:57.028
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:35:57.236
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:35:57.242
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:35:57.248
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 20:35:57.763
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:27.371
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:31.048
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:32.611
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:33.631
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:34.261
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:51.580
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:36:57.852
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:12.288
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:13.175
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:14.370
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:15.863
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:16.781
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:17.971
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:20.899
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:23.403
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:30.359
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:32.235
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:33.196
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:36.199
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:38.135
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:41.131
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:38:41.715
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:39:58.290
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:40:01.349
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:40:03.076
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:40:03.679
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-12-14 20:41:51.695
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:49:09.458
+!MESSAGE [Info]	ESLint server running in node v20.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:49:09.658
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.5.4 from path "D:\dowload\sts 4.26\plugins\org.eclipse.wildwebdeveloper_1.2.3.202408270415\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-12-14 20:49:09.668
+!MESSAGE [Info]	Typescript Server version info: {version=5.5.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:09.682
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:09.739
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:09.784
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:13.824
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:13.830
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:13.837
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-12-14 20:49:13.844
+!MESSAGE [Error]	Unexpected resource file:///C:/Users/ASUS/OneDrive/M%C3%A1y%20t%C3%ADnh/e-commerce%20project/ShopappProject/ShopappWebParent/ShopappBackEnd/src/main/java/com/shopapp/admin/controller/ProductController.java

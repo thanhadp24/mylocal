@@ -14,7 +14,7 @@
 
 		<div th:replace="fragments:: message"></div>
 		
-		<div th:replace="fragments:: search('/brands')"></div>
+		<div th:replace="fragments:: search"></div>
 		
 		<div class="full-details">
 			<table class="table table-responsive-xl table-bordered table-hover table-striped">
@@ -22,7 +22,7 @@
 					<tr>
 						<th class="hidable-column">Brand ID</th>
 						<th class="text-center">Logo</th>
-						<th th:replace="fragments:: column_link('/brands', 'name', 'Brand Name', 'none')"></th>
+						<th th:replace="fragments:: column_link('name', 'Brand Name', 'none')"></th>
 						<th>Categories</th>
 						<th>Action</th>
 					</tr>
@@ -69,7 +69,7 @@
 			</div>
 		</div>
 
-		<div th:replace="fragments:: pagination('/brands', 'brands')"></div>
+		<div th:replace="fragments:: pagination('brands')"></div>
 
 		<div th:replace="modal_fragments:: modal_confirm"></div>
 

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -16,11 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.shopapp.admin.common.Common;
 import com.shopapp.admin.exception.UserNotFoundException;
 import com.shopapp.admin.exporter.UserCsvExporter;
 import com.shopapp.admin.exporter.UserExcelExporter;
 import com.shopapp.admin.exporter.UserPdfExporter;
+import com.shopapp.admin.helper.PagingAndSortingHelper;
+import com.shopapp.admin.paging.PagingAndSortingParam;
 import com.shopapp.admin.service.RoleService;
 import com.shopapp.admin.service.UserService;
 import com.shopapp.admin.utils.FileUploadUtil;
@@ -39,15 +38,14 @@ public class UserController {
 	private RoleService roleService;
 	
 	@GetMapping("/users")
-	public String firstPage(Model model) {
-		return getByPage(1, model, "firstName", "asc", null);
+	public String firstPage() {
+		return "redirect:/users/page/1?sortDir=asc&sortField=firstName";
 	}
 	
 	@GetMapping("/users/page/{pageNum}")
-	public String getByPage(@PathVariable("pageNum") int pageNum, Model model,
-				@Param("sortField") String sortField,
-				@Param("sortDir") String sortDir,
-				@Param("keyword") String keyword) {
+	public String getByPage(@PagingAndSortingParam(moduleURL = "/users", listName = "users") 
+			PagingAndSortingHelper helper,
+			@PathVariable("pageNum") int pageNum, Model model) {
 
 		if(pageNum < 1) pageNum = 1;
 		
@@ -57,32 +55,7 @@ public class UserController {
 			pageNum = totalPages;
 		}
 		
-		Page<User> usersPage = userService.getByPage(pageNum, sortField, sortDir, keyword);
-		List<User> users = usersPage.getContent();
-		
-		long totalItems = usersPage.getTotalElements();
-		
-		long startCount = (pageNum - 1) * Common.USERS_PER_PAGE + 1;
-		long endCount = startCount + Common.USERS_PER_PAGE - 1;
-		
-		if(endCount > totalItems) {
-			endCount = totalItems;
-		}
-		
-		String reverseSortDir = sortDir.equals("asc") ? "desc": "asc";
-		
-		model.addAttribute("startCount", startCount);
-		model.addAttribute("endCount", endCount);
-		model.addAttribute("currentPage", pageNum);
-		
-		model.addAttribute("users", users);
-		model.addAttribute("totalPages", usersPage.getTotalPages());
-		model.addAttribute("totalItems", totalItems);
-		
-		model.addAttribute("sortField", sortField);
-		model.addAttribute("sortDir", sortDir);
-		model.addAttribute("reverseSortDir", reverseSortDir);
-		model.addAttribute("keyword", keyword);
+		userService.getByPage(pageNum, helper);
 		
 		return "users/users";
 	}
